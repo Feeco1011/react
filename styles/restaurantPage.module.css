@@ -8,10 +8,11 @@
 .header,
 .container,
 .largeContainer,
-.rectangle-container {
+.rectangleContainer {
   width: 1440px; /* 設定寬度 */
   margin: 0 10%;
   display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -19,7 +20,7 @@
 }
 .container,
 .largeContainer,
-.rectangle-container {
+.rectangleContainer {
   padding: 0%;
   margin-top: 5%;
 }
@@ -36,7 +37,7 @@
   gap: 40px;
 }
 
-.rectangle-container {
+.rectangleContainer {
   gap: 10px;
 }
 
@@ -51,7 +52,7 @@
   padding: 10px; /* 内边距 */
   box-sizing: border-box; /* 使内边距包含在宽高计算中 */
 }
-.rectangle-text {
+.rectangleText {
   position: absolute; /* 设置绝对定位 */
   top: 10px; /* 距离顶部10像素 */
   left: 10px; /* 距离左侧10像素 */
@@ -73,7 +74,7 @@
   text-decoration: none; /* 去掉下劃線 */
 }
 
-.image-section {
+.imageSection {
   position: relative; /* 使子元素的絕對定位相對於這個元素 */
   width: 100%;
   height: 80%;
@@ -104,18 +105,18 @@
   font-size: 18px; /* 字體大小 */
 }
 
-.right-icon-overlay {
+.rightIconOverlay {
   position: absolute; /* 絕對定位 */
   top: 10px; /* 上邊距 */
   right: 10px; /* 右邊距 */
 }
 
-.right-icon {
+.rightIcon {
   width: 24px;
   height: 24px;
 }
 
-.text-section {
+.textSection {
   padding: 10%;
   text-align: center;
 }
@@ -142,7 +143,7 @@
   flex-direction: column;
 }
 
-.image-section {
+.imageSection {
   position: relative; /* 使子元素的絕對定位相對於這個元素 */
   width: 100%;
   height: 60%;
@@ -169,13 +170,13 @@
   margin-right: 8px; /* 圖標和文字之間的間距 */
 }
 
-.right-icon-overlay {
+.rightIconOverlay {
   position: absolute; /* 絕對定位 */
   top: 10px; /* 上邊距 */
   right: 10px; /* 右邊距 */
 }
 
-.right-icon {
+.rightIcon {
   width: 24px;
   height: 24px;
 }
