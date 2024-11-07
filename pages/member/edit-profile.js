@@ -76,19 +76,21 @@ const Profile = () => {
             </div>
           </div>
           <div className={styles.inputGroup1}>
-            <label className={styles.div6}>電話號碼</label>
+            <label className={styles.div6} htmlFor="mobile">電話號碼</label>
             <input
               type="tel"
               className={styles.input}
               placeholder="請輸入電話號碼"
+              id="mobile"
             />
           </div>
           <div className={styles.inputGroup2}>
-            <label className={styles.div6}>電子信箱</label>
+            <label className={styles.div6} htmlFor="email">電子信箱</label>
             <input
               type="email"
               className={styles.input}
               placeholder="請輸入電子信箱"
+              id="email"
               disabled
             />
           </div>
@@ -113,12 +115,8 @@ const Profile = () => {
               <div className={styles.component22}>
                 <div className={styles.destination}>
                   <div className={styles.iconpin}>
-                    <img
-                      className={styles.iconpin1}
-                      alt=""
-                      src="Icon/Pin.svg"
-                    />
                     
+                    {/* <Image> </Image> */}
                   </div>
                   <div className={styles.paragraphTw}>新北市</div>
                 </div>
