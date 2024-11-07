@@ -1,8 +1,7 @@
 // import '@/styles/globals.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 import { AuthProvider } from '@/hooks/use-auth'
+
 
 
 export default function MyApp({ Component, pageProps }) {
