@@ -1,0 +1,950 @@
+.logo1 {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 121.82%;
+  font-weight: 800;
+}
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 133.1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.iconpin1 {
+  width: 30px;
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.iconpin {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.paragraphTw {
+  position: relative;
+  line-height: 144.73%;
+  font-weight: 500;
+}
+.destination {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.component22 {
+  position: absolute;
+  top: 4.13px;
+  left: 16.93px;
+  border-radius: 8px;
+  background-color: #fc9f4d;
+  width: 100px;
+  height: 42px;
+  overflow: hidden;
+}
+.component22Wrapper {
+  position: absolute;
+  top: 0.75px;
+  left: 0px;
+  border-right: 1px solid #000;
+  box-sizing: border-box;
+  width: 143px;
+  height: 57px;
+  overflow: hidden;
+}
+.div {
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  line-height: 144.73%;
+  font-weight: 500;
+}
+.component21 {
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  border-radius: 8px;
+  width: 95px;
+  height: 42px;
+  overflow: hidden;
+}
+.component21Wrapper {
+  position: absolute;
+  top: 0px;
+  left: 143px;
+  width: 424.7px;
+  height: 57px;
+  overflow: hidden;
+}
+.frameParent {
+  position: absolute;
+  top: 4px;
+  left: 213.07px;
+  width: 567.7px;
+  height: 57.8px;
+  text-align: left;
+  font-size: 18px;
+  color: #000;
+  font-family: 'Noto Sans TC';
+}
+.logoParent {
+  width: 780.8px;
+  position: relative;
+  height: 61.8px;
+}
+.magnifyingGlass1Icon {
+  width: 30px;
+  position: relative;
+  height: 30px;
+  object-fit: cover;
+}
+.div1 {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 121.82%;
+}
+.iconGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 23px;
+  font-size: 24px;
+  color: #000;
+}
+.header {
+  width: 1440px;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+  height: 78px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 144px;
+}
+.b {
+  position: absolute;
+  top: 42px;
+  left: 62.5px;
+  display: inline-block;
+  width: 288px;
+  height: 58px;
+}
+.info {
+  position: absolute;
+  top: 556px;
+  left: 206.5px;
+  width: 425px;
+  height: 55px;
+}
+
+.child {
+  position: absolute;
+  top: 29px;
+  left: -155px;
+  border-radius: 10px;
+  background-color: #fc9f4d;
+  width: 590px;
+  height: 46px;
+}
+
+.registerchild {
+  position: absolute;
+  top: 50px;
+  left: -155px;
+  border-radius: 10px;
+  background-color: #fc9f4d;
+  width: 590px;
+  height: 46px;
+}
+
+
+.div3 {
+  position: absolute;
+  top: 725px;
+  left: 334.5px;
+  width: 153px;
+  height: 104px;
+}
+
+.alllogin {
+  position: absolute;
+  top: 410px;
+  left: 334.5px;
+  width: 153px;
+  height: 104px;
+}
+.b1 {
+  position: absolute;
+  top: calc(50% + 286.5px);
+  left: calc(50% - 16px);
+  display: inline-block;
+  text-align: center;
+  width: 143px;
+  font-size: 30px;
+}
+.b2 {
+  width: 239px;
+  position: relative;
+  display: inline-block;
+  height: 51px;
+  flex-shrink: 0;
+  font-size: 22px;
+}
+.memberyet {
+  width: 239px;
+  position: relative;
+  display: inline-block;
+  height: 51px;
+  flex-shrink: 0;
+  font-size: 22px;
+  bottom: 340px;
+  left: 100px;
+
+}
+.b3 {
+  position: relative;
+  font-size: 22px;
+  right: 30px;
+  bottom: 9px;
+}
+.tosignup {
+  position: relative;
+  font-size: 22px;
+  right: -60px;
+  bottom: 350px;
+}
+.logingrorp2 {
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #7db9de;
+}
+.registergroup2 {
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #7db9de;
+}
+.logingrorp1 {
+  position: absolute;
+  top: 829px;
+  left: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+}
+.registergroup1 {
+  position: absolute;
+  top: 829px;
+  left: 269.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+}
+.div7 {
+  width: 90px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 35px;
+  flex-shrink: 0;
+}
+/* .item {
+  width: 590px;
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  height: 55px;
+} */
+.div6 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+}
+.p {
+  margin: 0;
+}
+.div8 {
+  width: 48px;
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  flex-shrink: 0;
+}
+.sexChild {
+  width: 31px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  height: 31px;
+}
+
+.div9 {
+  width: 48px;
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  flex-shrink: 0;
+}
+.sex {
+  width: 293px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.sexGroup {
+  width: 660px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.div13 {
+  position: relative;
+  z-index: 0;
+  width: 100px;
+  display: inline-block;
+  flex-shrink: 0;
+
+}
+.showpass {
+  font-size: 16px;
+ position: relative; 
+ top: 70px;
+ left: -535px;
+ background-color: #7db9de;
+  border-radius: 5px;
+  border: none;
+  transform-origin: left; 
+}
+
+.registerconfirmshowpass {
+  font-size: 16px;
+ position: relative; 
+  top: -10px;
+  left: 120px;   
+  background-color: #7db9de;
+  border-radius: 5px;
+  border: none;
+
+}
+.showloginpass {
+  font-size: 16px;
+ position: relative; 
+  top: 70px;
+  left: -535px;   
+  background-color: #7db9de;
+  border-radius: 5px;
+  border: none;
+ 
+
+}
+.loginconfirmshowpass {
+  font-size: 16px;
+ position: relative;
+  top:-10px;
+  left: 120px;  
+  background-color: #7db9de;
+  border-radius: 5px;
+  border: none;
+
+}
+/* .inner {
+  width: 590px;
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  left: 116px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  height: 55px;
+  z-index: 1;
+} */
+.div12 {
+  align-self: stretch;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  gap: 20px;
+}
+.div17 {
+  align-self: stretch;
+  position: relative;
+  display: inline-block;
+  height: 38px;
+
+  flex-shrink: 0;
+}
+.profileInfo {
+  position: absolute;
+  top: 8.5px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.info1 {
+  position: absolute;
+  top: 0px;
+  left: 116px;
+  width: 590px;
+  height: 55px;
+}
+.div16 {
+  align-self: stretch;
+  position: relative;
+  height: 55px;
+  z-index: 0;
+}
+.rectangleDiv {
+  width: 590px;
+  position: absolute;
+  margin: 0 ;
+  top: 0px;
+  left: 68px;
+  /* border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box; */
+  height: 55px;
+  z-index: 1;
+}
+.div18 {
+  margin: 0 ;
+  position: absolute;
+  top: 105px;
+  left: 0px;
+ display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  z-index: 1;
+  text-align: center;
+}
+
+.div20 {
+  width: 541px;
+  margin: 0 ;
+  position: absolute;
+  top: 211px;
+  left: 0px;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  z-index: 1;
+}
+
+.div15 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  gap: 50px;
+  z-index: 0;
+}
+
+.div14 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 156px;
+}
+.register {
+  position: absolute;
+  top: 150px;
+  left: 62.5px;
+  width: 702px;
+  height: 575px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 52px;
+  font-size: 24px;
+}
+.login {
+  position: absolute;
+  top: 70px;
+  left: 62.5px;
+  width: 702px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 52px;
+  font-size: 24px;
+}
+
+
+.signupcard {
+  width: 819px;
+  position: relative;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  background-color: #fff;
+  height: 935px;
+  overflow: hidden;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 32px;
+  color: #000;
+  font-family: 'Noto Sans TC';
+}
+
+.signincard {
+  width: 819px;
+  position: relative;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  background-color: #fff;
+  height: 580px;
+  overflow: hidden;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 32px;
+  color: #000;
+  font-family: 'Noto Sans TC';
+}
+.profile {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 1151px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0px 144px;
+  box-sizing: border-box;
+  gap: 44px;
+  text-align: center;
+  font-size: 48px;
+  color: #7db9de;
+  font-family: Inter;
+}
+
+
+.div600 {
+  width: 50px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  left: 50px
+}
+
+.input {
+  width: 590px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 21px;
+  text-align: left;
+}
+.inputGroup {
+  width: 709px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;
+}
+
+.password {
+  position: relative;
+  z-index: 0;
+
+  display: inline-block;
+  flex-shrink: 0;
+
+}
+
+.inputGroup2 {
+  width: 712px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+ 
+}
+
+/* mobile */
+@media(max-width: 375px) {
+  .input {
+    width: 200px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 21px;
+    text-align: left;
+  }
+  .signupcard {
+    width: 375px;
+   position: relative;
+   background-color: #fff;
+    height: 935px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Noto Sans TC';
+  }
+  
+  .signincard {
+    width: 375px;
+    position: relative;
+   background-color: #fff;
+    height: 580px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Noto Sans TC';
+
+  }
+ 
+  .info {
+    position: absolute;
+    top: 556px;
+    left: 206.5px;
+    width: 425px;
+    height: 55px;
+  }
+
+  .div13 {
+    position: relative;
+    z-index: 0;
+    width: 70px;
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 16px;
+  
+  }
+  .inputGroup2 {
+    width: 712px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;  
+  }
+  .login {
+    position: absolute;
+    top: 70px;
+    left: 62.5px;
+    width: 375px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .div18 {
+    margin: 0 ;
+    position: absolute;
+    top: 105px;
+    left: 0px;
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .div20 {
+    width: 541px;
+    margin: 0 ;
+    position: absolute;
+    top: 211px;
+    left: 0px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    z-index: 1;
+  }
+  /* register */
+  .div600 {
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    left: 35px;
+    font-size: 16px;
+  }
+  .inputGroup {
+    width: 709px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  .register {
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    width: 702px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 30px;
+    font-size: 24px;
+  }
+  .sexGroup {
+    width: 660px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+ 
+  .div8 {
+    width: 48px;
+    position: relative;
+    display: inline-block;
+    height: 35px;
+    flex-shrink: 0;
+  }
+
+  .p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .sex {
+    width: 293px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 16px;
+  }
+  .div18 {
+    margin: 0 ;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+  
+  .div20 {
+  width: 541px;
+  margin: 0 ;
+  position: absolute;
+  top: 200px;
+  left: 0px;
+  height: 55px;
+}
+
+.div12 {
+  gap: 10px;
+}
+.child {
+  position: absolute;
+  top: -60px;
+  left: -190px;
+  border-radius: 10px;
+  background-color: #fc9f4d;
+  width: 200px;
+  height: 46px;
+}
+
+.registerchild {
+  position: absolute;
+  top: -90px;
+  left: -200px;
+  border-radius: 10px;
+  background-color: #fc9f4d;
+  width: 200px;
+  height: 46px;
+}
+.registergroup1 {
+  position: absolute;
+  top: 685px;
+  left: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+}
+.logingrorp1 {
+  position: absolute;
+  top: 829px;
+  left: 269.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+}
+.registergroup2 {
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+.logingrorp2 {
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+.b2 {
+  width: 239px;
+  position: relative;
+  display: inline-block;
+  height: 51px;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+.b3 {
+  position: relative;
+  font-size: 16px;
+  right: 55px;
+  bottom: 15px;
+  width:85px;
+ 
+}
+.tosignup {
+  position: relative;
+  width:85px;
+  font-size: 16px;
+  right: 200px;
+  bottom: 445px;
+}
+.memberyet {
+  width: 180px;
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  flex-shrink: 0;
+  font-size: 16px;
+  bottom: 430px;
+  left: -160px;
+
+}
+
+.showloginpass {
+  font-size: 16px;
+ position: relative; 
+  top: 50px;
+  left: -235px;   
+ 
+}
+
+.loginconfirmshowpass {
+  font-size: 16px;
+ position: relative;
+  top:-50px;
+  left: 80px;  
+  background-color: #7db9de;
+  border-radius: 5px;
+  border: none;
+}
+
+.showpass {
+  font-size: 16px;
+ position: relative; 
+  top: 60px;
+ left: -570px;
+  background-color: #7db9de;
+  border-radius: 5px;
+  border: none;
+}
+.registerconfirmshowpass {
+  font-size: 16px;
+ position: relative; 
+  top: -25px;
+  left: 80px;   
+  background-color: #7db9de;
+  border-radius: 5px;
+  border: none;
+
+}
+}
+
