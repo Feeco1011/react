@@ -20,34 +20,35 @@ export default function Index() {
       </header>
 
       <div className={style.container}>
-        <div className={style.cardContainer} id="cardContainer1">
-          <div className={style.imageSection}>
-            <img
-              src="/restaurantPicture/one/心潮1.jpg"
-              alt="Photo"
-              className={style.photo}
-            />
-            <div className={style.overlay}>
+          <div className={style.cardContainer} id="cardContainer1">
+            <div className={style.imageSection}>
               <img
-                src="/logoTest/logoTest.ico"
-                alt="icon"
-                className={style.icon}
+                src="/restaurantPicture/one/心潮1.jpg"
+                alt="Photo"
+                className={style.photo}
               />
-              <span className={style.text}>文字標題</span>
+              <div className={style.overlay}>
+                <img
+                  src="/logoTest/logoTest.ico"
+                  alt="icon"
+                  className={style.icon}
+                />
+                <span className={style.text}>文字標題</span>
+              </div>
+              <div className={style.rightIconOverlay}>
+                <img
+                  src="/logoTest/logoTest.ico"
+                  alt="icon"
+                  className={style.rightIcon}
+                />
+              </div>
             </div>
-            <div className={style.rightIconOverlay}>
-              <img
-                src="/logoTest/logoTest.ico"
-                alt="icon"
-                className={style.rightIcon}
-              />
+            <div className={style.textSection}>
+              <p>這是第一行文字</p>
+              <p>這是第二行文字</p>
             </div>
           </div>
-          <div className={style.textSection}>
-            <p>這是第一行文字</p>
-            <p>這是第二行文字</p>
-          </div>
-        </div>
+        
 
         <div className={style.cardContainer} id="cardContainer2">
           <div className={style.imageSection}>
@@ -543,7 +544,6 @@ export default function Index() {
             <p>這是第二行文字</p>
           </div>
         </div>
-
       </div>
 
       <div className={style.rectangleContainer}>
