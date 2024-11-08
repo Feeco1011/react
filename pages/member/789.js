@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '@/styles/header.module.css'
-import { FaUser, FaCamera } from 'react-icons/fa6'
+import { FaUser  } from 'react-icons/fa6'
 import { FaSearch } from 'react-icons/fa'
-import { HiMapPin } from "react-icons/hi2";
+
 // import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 
@@ -78,13 +78,10 @@ export default function Navbar() {
                 }}
                 size="30px"
               />
-              
-          
             </div>
           </div>
         </div>
         </div>
-           
-
-              ) }
+  )
+ }
               

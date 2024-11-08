@@ -18,38 +18,37 @@ const Password = () => {
   const [showConfirmPass, setShowConfirmPass] = useState(false)
 
   return (
-    <div className={styles.profile}>
-      <div className={styles.card}>
-        <div className={styles.image}>
-          <img className={styles.imageChild} alt="" src="Ellipse 1.png" />
-          <b className={styles.b}>王小明</b>
-        </div>
+    // <div className={styles.profile}>
+    //   <div className={styles.card}>
+    //     <div className={styles.image}>
+    //       <img className={styles.imageChild} alt="" src="Ellipse 1.png" />
+    //       <b className={styles.b}>王小明</b>
+    //     </div>
 
-        <FaCamera
-          className="icon"
-          style={{
-            position: 'absolute',
-            top: '110px',
-            left: '147px',
-            height: '50px',
-            overflow: 'hidden',
-          }}
-          size="30px"
-          // onClick={}
-        />
+    //     <FaCamera
+    //       className="icon"
+    //       style={{
+    //         position: 'absolute',
+    //         top: '110px',
+    //         left: '147px',
+    //         height: '50px',
+    //         overflow: 'hidden',
+    //       }}
+    //       size="30px"
+    //       // onClick={}
+    //     />
 
-        <div className={styles.info}>
-          <Link href="/test/user/edit-profile">修改個人資訊</Link>
-          <Link href="/test/user/change-password">變更密碼</Link>
-          <Link href="/test/user/hotel-booking">我的訂房</Link>
-          <Link href="/test/user/restaurant-reservation">我的訂位</Link>
-          <Link href="/test/user/my-blog">我的論壇</Link>
-          <Link href="/test/user/my-fav">我的收藏</Link>
+    //     <div className={styles.info}>
+    //       <Link href="/test/user/edit-profile">修改個人資訊</Link>
+    //       <Link href="/test/user/change-password">變更密碼</Link>
+    //       <Link href="/test/user/hotel-booking">我的訂房</Link>
+    //       <Link href="/test/user/restaurant-reservation">我的訂位</Link>
+    //       <Link href="/test/user/my-blog">我的論壇</Link>
+         
 
-          {/* <div className={styles.div}>修改個人資訊</div> */}
-          {/* <div className={styles.div1}>變更密碼</div> */}
-        </div>
-      </div>
+          
+      //   </div>
+      // </div>
       <div className={styles.card1}>
         <b className={styles.b1}>變更密碼</b>
         <div className={styles.passwordinfo1}>
@@ -139,46 +138,8 @@ const Password = () => {
           </div>
         </div>
       </div>
-      <div className={styles.header}>
-        <div className={styles.logoParent}>
-          <div className={styles.logo}>
-            <div className={styles.logo1}>LOGO</div>
-          </div>
-          <div className={styles.frameParent}>
-            <div className={styles.component22Wrapper}>
-              <div className={styles.component22}>
-                <div className={styles.destination}>
-                  <div className={styles.iconpin}>
-                  {/* <Image> </Image> */}
-                  </div>
-                  <div className={styles.paragraphTw}>新北市</div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.component21Wrapper}>
-              <div className={styles.component21}>
-                <div className={styles.div17}>景點</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.iconGroup}>
-          <FaSearch className="icon" size="30px" />
-
-          <div className={styles.iconGroup1}>
-            <div className={styles['button']}>
-              <FaUser
-                className="icon"
-                style={{
-                  marginBottom: '5px',
-                }}
-                size="30px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      // </div>
+         
   )
 }
 

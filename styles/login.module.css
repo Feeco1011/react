@@ -541,6 +541,7 @@
   font-size: 32px;
   color: #000;
   font-family: 'Noto Sans TC';
+  top: 100px;
 }
 
 .signincard {
@@ -556,6 +557,7 @@
   font-size: 32px;
   color: #000;
   font-family: 'Noto Sans TC';
+  top: 100px;
 }
 .profile {
   width: 100%;

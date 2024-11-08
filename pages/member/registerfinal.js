@@ -36,43 +36,6 @@ const Register = () => {
 
   return (
     <div className={styles.profile}>
-      <div className={styles.header}>
-        <div className={styles.logoParent}>
-          <div className={styles.logo}>
-            <div className={styles.logo1}>LOGO</div>
-          </div>
-          <div className={styles.frameParent}>
-            <div className={styles.component22Wrapper}>
-              <div className={styles.component22}>
-                <div className={styles.destination}>
-                  <div className={styles.iconpin}>
-                    <img
-                      className={styles.iconpin1}
-                      alt=""
-                      src="Icon/Pin.svg"
-                    />
-                  </div>
-                  <div className={styles.paragraphTw}>新北市</div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.component21Wrapper}>
-              <div className={styles.component21}>
-                <div className={styles.div}>景點</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.iconGroup}>
-          <img
-            className={styles.magnifyingGlass1Icon}
-            alt=""
-            src="magnifying-glass 1.png"
-          />
-          <div className={styles.div1}>登入</div>
-          <div className={styles.div1}>註冊</div>
-        </div>
-      </div>
       <div className={styles.signupcard}>
         <b className={styles.b}>會員註冊</b>
         {/* <div className={styles.info} /> */}
