@@ -130,7 +130,7 @@ export function AuthProvider({ children }) {
   }
 
   // 模擬會員登入
-  const login = async (username, password) => {
+  const login = async (name, password) => {
     // 向伺服器作fetch
     const res = await fetch('http://localhost:3005/api/member/login', {
       credentials: 'include', // 設定cookie必要設定，如果有需要授權或認証一定要加
@@ -139,7 +139,7 @@ export function AuthProvider({ children }) {
         'Content-Type': 'application/json',
       },
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ name, password }),
     })
 
     const resData = await res.json()

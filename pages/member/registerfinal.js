@@ -1,6 +1,4 @@
 import styles from '@/styles/login.module.css'
-import { FaUser, FaCamera } from 'react-icons/fa6'
-import { FaSearch } from 'react-icons/fa'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/use-auth'
@@ -8,12 +6,7 @@ import { useAuth } from '@/hooks/use-auth'
 const Register = () => {
     // 從勾子的context得到註冊函式
   const { register } = useAuth()
-  const [newPass, setNewPass] = useState('')
-  const [confirmPass, setConfirmPass] = useState('')
-  // 呈現密碼用
-  const [showNewPass, setShowNewPass] = useState(false)
-  const [showConfirmPass, setShowConfirmPass] = useState(false)
-
+  
   // 狀態為物件，屬性對應到表單的欄位名稱
   const [user, setUser] = useState({
     name: '',
@@ -33,6 +26,12 @@ const Register = () => {
     password: '',
     confirmPassword: '', // 錯誤訊息用字串
   })
+  
+  const [newPass, setNewPass] = useState('')
+  const [confirmPass, setConfirmPass] = useState('')
+  // 呈現密碼用
+  const [showNewPass, setShowNewPass] = useState(false)
+  const [showConfirmPass, setShowConfirmPass] = useState(false)
 
   // 多欄位共用事件函式
   const handleFieldChange = (e) => {
@@ -68,15 +67,13 @@ const Register = () => {
   }
 
   if (!user.mobile) {
-    newErrors.email = '手機號碼為必填'
+    newErrors.mobile = '電話號碼為必填'
   }
 
 
   if (!user.email) {
     newErrors.email = '電子信箱為必填'
   }
-
-
 
   if (user.password !== user.confirmPassword) {
     newErrors.password = '密碼與確認密碼需要相同'
@@ -117,7 +114,7 @@ const handleSubmit = async (e) => {
 
   // 送到伺服器
   // 刪除不必要的欄位(不一定需要)
-  const { showConfirmPass, ...newUser } = user
+  const { confirmPassword, ...newUser } = user
   // 呼叫register(useAuth勾子裡)
   await register(newUser)
 }
@@ -130,7 +127,7 @@ const handleSubmit = async (e) => {
         <b className={styles.b}>會員註冊</b>
         {/* <div className={styles.info} /> */}
         <div className={styles.div3}>
-          <button type="button" className={styles.registerchild}>
+          <button type="submit" className={styles.registerchild}>
             會員註冊
           </button>
           <button
@@ -155,7 +152,7 @@ const handleSubmit = async (e) => {
             <Link href="login" className={styles.b3}>
               回會員登入
             </Link>
-            {/* <b className={styles.b3}>回會員登入</b> */}
+        
           </div>
         </div>
         <div className={styles.register}>
@@ -165,13 +162,18 @@ const handleSubmit = async (e) => {
             </label>
             <input
               type="text"
+              name="name"
               className={styles.input}
               onChange={handleFieldChange}
-              // value={user.name}
+              value={user.name}
               placeholder="請輸入姓名"
               id="name"
             />
-            <span className="error">{errors.name}</span>
+            <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'50px',left:'130px',   position:'absolute', } }>{errors.sex}</span>
+           
+          
             <div className={styles.item} />
           </div>
           <div className={styles.sexGroup}>
@@ -194,20 +196,28 @@ const handleSubmit = async (e) => {
                 其他
               </label>
             </div>
+            <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'130px',left:'130px',   position:'absolute', } }>{errors.sex}</span>
           </div>
+         
 
           <div className={styles.div12}>
             <label className={styles.div13} htmlFor="mobile">電話號碼</label>
             <input
               type="tel"
+               name="mobile"
               className={styles.input}
               placeholder="請輸入電話號碼"
               id="mobile"
+              value={user.mobile}
               onChange={handleFieldChange}
             />
-            <span className="error">{errors.mobile}</span>
+             <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'55px',left:'130px',   position:'absolute', } }>{errors.mobile}</span>
           </div>
-
+          
           <div className={styles.div14}>
             <div className={styles.div15}>
               <div className={styles.div16}>
@@ -216,20 +226,29 @@ const handleSubmit = async (e) => {
                     <label className={styles.div13} htmlFor="email">電子信箱{' '}</label>
                     <input
                       type="email"
+                       name="email"
                       className={styles.input}
                       onChange={handleFieldChange}
                       placeholder="請輸入電子信箱"
                       id="email"
-                    />
-                     <span className="error">{errors.email}</span>
+                      value={user.email}
+
+                    />  
+                   
                   </div>
+                  <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'50px',left:'130px',   position:'absolute', } }>{errors.email}</span>
                 </div>
+               
               </div>
+             
               <div className={styles.div18}>
                 <label className={styles.div13} htmlFor="password">密碼{' '}</label>
                 <input
                   type={showNewPass ? 'text' : 'password'}
-                  value={newPass}
+                    name="password"
+                  value={user.password.newPass}
                   className={styles.input}
                   placeholder="請輸入密碼"
                   id="password"
@@ -247,16 +266,20 @@ const handleSubmit = async (e) => {
                 }}
               >
                 {showNewPass ? '顯示' : '不顯示'}
-                <span className="error">{errors.password}</span>
-              </button>
-            
-            </div>
+              </button>  
+               </div>
+               <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'180px',left:'185px',   position:'absolute', } }>{errors.password}</span>
+              
+              
+               
 
             <div className={styles.div20}>
               <label className={styles.div13} htmlFor="confirmPassword">確認密碼{' '}</label>
               <input
                 type={showConfirmPass ? 'text' : 'password'}
-                value={confirmPass}
+                value={user.confirmPassword.confirmPass}
                 className={styles.input}
                 placeholder="再次確認密碼"
                 id="confirmPassword"
@@ -273,15 +296,18 @@ const handleSubmit = async (e) => {
               }}
             >
               {showConfirmPass ? '顯示' : '不顯示'}
-            </button>
-          
+            </button> 
           </div>
-          <span className="error">{errors.confirmPassword}</span>
+         
+ <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'560px',left:'190px',   position:'absolute', } }>{errors.confirmPassword}</span>
         </div>
       </div>
     </div>
     </form>
-    
+
+  
       
   )
 }
