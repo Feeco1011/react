@@ -171,7 +171,7 @@ const handleSubmit = async (e) => {
             />
             <span className="error" style={{color: 'red',
   fontSize: '12px',
-  height: '16px',top:'50px',left:'130px',   position:'absolute', } }>{errors.sex}</span>
+  height: '16px',top:'50px',left:'130px',   position:'absolute', } }>{errors.name}</span>
            
           
             <div className={styles.item} />
@@ -184,21 +184,22 @@ const handleSubmit = async (e) => {
               {/* <label className={styles.sexChild} > */}
 
               <label class="radio-container">
-                <input type="radio" name="sex" value="male" />
+                <input type="radio" name="sex" value="male" onChange={handleFieldChange}
+              />
                 男性
               </label>
               <label class="radio-container">
-                <input type="radio" name="sex" value="female" />
-                女姓
+                <input type="radio" name="sex" value="female" onChange={handleFieldChange} />
+                女性
               </label>
               <label>
-                <input type="radio" name="sex" value="other" />
+                <input type="radio" name="sex" value="other" onChange={handleFieldChange} />
                 其他
               </label>
             </div>
             <span className="error" style={{color: 'red',
   fontSize: '12px',
-  height: '16px',top:'130px',left:'130px',   position:'absolute', } }>{errors.sex}</span>
+  height: '16px',top:'130px',left:'130px',   position:'absolute' } }>{errors.sex}</span>
           </div>
          
 
@@ -252,9 +253,10 @@ const handleSubmit = async (e) => {
                   className={styles.input}
                   placeholder="請輸入密碼"
                   id="password"
-                  // onChange={handleFieldChange}
+                  
                   onChange={(e) => {
-                    setNewPass(e.target.value)
+                    handleFieldChange(e);
+                    setNewPass(e.target.value);
                   }}
                 />
               </div>
@@ -280,12 +282,15 @@ const handleSubmit = async (e) => {
               <input
                 type={showConfirmPass ? 'text' : 'password'}
                 value={user.confirmPassword.confirmPass}
-                className={styles.input}
+                className={styles.input} 
                 placeholder="再次確認密碼"
                 id="confirmPassword"
-                // onChange={handleFieldChange}
+                name="confirmPassword"
+
+              
                 onChange={(e) => {
-                  setConfirmPass(e.target.value)
+              handleFieldChange(e);
+              setConfirmPass(e.target.value)
                 }}
               />
             </div>
@@ -301,13 +306,11 @@ const handleSubmit = async (e) => {
          
  <span className="error" style={{color: 'red',
   fontSize: '12px',
-  height: '16px',top:'560px',left:'190px',   position:'absolute', } }>{errors.confirmPassword}</span>
+  height: '16px',top:'560px',left:'190px',   position:'absolute' } }>{errors.confirmPassword}</span>
         </div>
       </div>
     </div>
     </form>
-
-  
       
   )
 }

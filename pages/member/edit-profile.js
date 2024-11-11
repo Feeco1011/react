@@ -69,7 +69,7 @@ const Profile = () => {
               </label>
               <label>
                 <input type="radio" name="sex" value="female" />
-                女姓
+                女性
               </label>
               <label>
                 <input type="radio" name="sex" value="other" />
@@ -99,8 +99,6 @@ const Profile = () => {
         </div>
         <div className={styles.div16}>
           <div className={styles.savePc}>
-            {/* <div className={styles.savePcChild} />
-            <div className={styles.b2}>儲存</div> */}
             <button type="button" className={styles.savePcChild}>
               儲存
             </button>

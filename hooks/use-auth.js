@@ -130,7 +130,7 @@ export function AuthProvider({ children }) {
   }
 
   // 模擬會員登入
-  const login = async (name, password) => {
+  const login = async (email, password) => {
     // 向伺服器作fetch
     const res = await fetch('http://localhost:3005/api/member/login', {
       credentials: 'include', // 設定cookie必要設定，如果有需要授權或認証一定要加
@@ -139,7 +139,7 @@ export function AuthProvider({ children }) {
         'Content-Type': 'application/json',
       },
       method: 'POST',
-      body: JSON.stringify({ name, password }),
+      body: JSON.stringify({ email, password }),
     })
 
     const resData = await res.json()
@@ -162,11 +162,11 @@ export function AuthProvider({ children }) {
       })
 
       // 歡迎訊息與詢問是否要到個人資料頁
-      if (confirm('你好，是否要前往修改個人資料頁?')) {
+      if (confirm('你好，是否要前往修改個人資訊頁?')) {
         router.push('/member/edit-profile')
       }
     } else {
-      alert('帳號或密碼錯誤')
+      alert('電子信箱或密碼錯誤')
     }
   }
 
@@ -198,12 +198,12 @@ export function AuthProvider({ children }) {
         },
       })
     } else {
-      alert('成功失敗!')
+      alert('失敗!')
     }
   }
 
   // 登入路由 - 當要進入隱私路由但未登入時，會跳轉到登入路由
-  const loginRoute = '/cs-1018/member/login-form'
+  const loginRoute = '/member/login'
   // 隱私(保護)路由
   const protectedRoutes = ['/member/edit-profile', 'dashboard/order']
   // 檢查會員狀態
@@ -225,7 +225,7 @@ export function AuthProvider({ children }) {
           isAuth: true,
           userData: {
             id: member.id,
-            username: member.username,
+            email: member.email,
           },
         }
         setAuth(nextAuth)
