@@ -20,7 +20,6 @@ export function AuthProvider({ children }) {
       id: 0,
       name: '',
       email: '',
-      username: '',
     },
   })
 
@@ -100,7 +99,7 @@ export function AuthProvider({ children }) {
         '你已註冊成功，現在要進行登入嗎？',
         '進行登入',
         () => {
-          router.push('/cs-1018/member/login')
+          router.push('/member/login')
         }
       )
     } else {
@@ -163,8 +162,8 @@ export function AuthProvider({ children }) {
       })
 
       // 歡迎訊息與詢問是否要到個人資料頁
-      if (confirm('你好，是否要前往個人資料頁?')) {
-        router.push('/cs-1018/member/profile')
+      if (confirm('你好，是否要前往修改個人資料頁?')) {
+        router.push('/member/edit-profile')
       }
     } else {
       alert('帳號或密碼錯誤')
@@ -196,7 +195,6 @@ export function AuthProvider({ children }) {
           id: 0,
           name: '',
           email: '',
-          username: '',
         },
       })
     } else {
@@ -207,7 +205,7 @@ export function AuthProvider({ children }) {
   // 登入路由 - 當要進入隱私路由但未登入時，會跳轉到登入路由
   const loginRoute = '/cs-1018/member/login-form'
   // 隱私(保護)路由
-  const protectedRoutes = ['/cs-1018/member/profile', 'dashboard/order']
+  const protectedRoutes = ['/member/edit-profile', 'dashboard/order']
   // 檢查會員狀態
   const checkState = async () => {
     try {

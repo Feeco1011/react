@@ -3,9 +3,11 @@ import { FaUser, FaCamera } from 'react-icons/fa6'
 import { FaSearch } from 'react-icons/fa'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Member from '@/components/member/member'
 
 const Profile = () => {
   return (
+
     // <div className={styles.profile}>
     //   <div className={styles.card}>
     //     <div className={styles.image}>
@@ -36,6 +38,8 @@ const Profile = () => {
          
         // </div>
       // </div>
+      <div>
+        <Member />
       <div className={styles.card1}>
         <b className={styles.b1}>修改個人資訊</b>
         <div className={styles.info1}>
@@ -103,7 +107,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-  //     </div>
+   </div>
   )
 }
 

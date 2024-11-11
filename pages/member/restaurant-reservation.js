@@ -3,6 +3,7 @@ import { FaUser, FaCamera } from 'react-icons/fa6'
 import { FaSearch } from 'react-icons/fa'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Member from '@/components/member/member'
 
 const Restaurant = () => {
   return (
@@ -36,6 +37,8 @@ const Restaurant = () => {
           
       //    </div>
       // </div>
+      <div>
+        <Member />
       <div className={styles.card1}>
       			<b className={styles.b1}>我的訂位</b>
       			<div className={styles.item}>

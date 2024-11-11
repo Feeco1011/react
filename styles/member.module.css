@@ -23,8 +23,8 @@
   width: 254px;
   position: absolute;
   margin: 0 ;
-  top: 160px;
-  left: 192px;
+  top: 75px;
+  left: 492px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   background-color: #fff;
@@ -32,6 +32,7 @@
   overflow: hidden;
   flex-shrink: 0;
   z-index: 0;
+
 }
 .image {
   position: absolute;
@@ -76,29 +77,29 @@
   text-decoration: none;
 }
 
+
+
 .inactive {
   color: black; 
   text-decoration: none;
 }
 
-.inactive:hover {
+.inactive :hover{
  text-decoration: none;
+ 
 }
 
 
-.active {
+.active  {
   color: #fc9f4d;
   text-decoration: none;
+  border-bottom-style: none;
+
 }
 /* mobile */
 @media(max-width: 375px) {
    
 
 
-
-
-
-
 }
-
 
