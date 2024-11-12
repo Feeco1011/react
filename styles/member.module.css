@@ -19,6 +19,9 @@
   font-family: 'Noto Sans TC';
 }
 
+.info a {
+text-decoration: none;
+}
 .card {
   width: 254px;
   position: absolute;
@@ -74,26 +77,18 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 25px;
-  text-decoration: none;
 }
 
 
 
 .inactive {
   color: black; 
-  text-decoration: none;
 }
 
-.inactive :hover{
- text-decoration: none;
- 
-}
 
 
 .active  {
   color: #fc9f4d;
-  text-decoration: none;
-  border-bottom-style: none;
 
 }
 /* mobile */

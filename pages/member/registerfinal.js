@@ -68,8 +68,11 @@ const Register = () => {
 
   if (!user.mobile) {
     newErrors.mobile = '電話號碼為必填'
+  }else if (!user.mobile.startsWith('09')) {
+    newErrors.mobile = '電話號碼必須以09開頭'
+  } else if (user.mobile.length > 10) {
+    newErrors.mobile = '電話號碼不能大於10碼'
   }
-
 
   if (!user.email) {
     newErrors.email = '電子信箱為必填'
@@ -130,7 +133,7 @@ const handleSubmit = async (e) => {
           <button type="submit" className={styles.registerchild}>
             會員註冊
           </button>
-          <button
+          {/* <button
           type="button"
           onClick={() => {
             setUser({
@@ -143,7 +146,7 @@ const handleSubmit = async (e) => {
 
             })
           }}
-        ></button>
+        ></button> */}
         </div>
         {/* <b className={styles.b1}>會員註冊</b> */}
         <div className={styles.registergroup1}>
