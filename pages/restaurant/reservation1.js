@@ -6,19 +6,19 @@ export default function Index() {
     <>
       <div className={style.block}>
   <div className={style.blockTitle}>快要完成了!</div>
-  <img className={style.rImg} src="./imgs/restaurantPicture/one/心潮1.jpg" alt="" />
+  <img className={style.rImg} src="/restaurantPicture/one/心潮1.jpg" alt="" />
   <div className={style.ifoAndName}>
     <div>心潮飯店</div>
     <div className={style.ifo}>
       <div>
-        <img src="./imgs/logoTest/date_icon.jpg" alt="" />
+        <img src="/logoTest/date_icon.jpg" alt="" />
         2024年10月14日
       </div>
       <div>
-        <img src="./imgs/logoTest/time_icon.jpg" alt="" /> 下午 7:00
+        <img src="/logoTest/time_icon.jpg" alt="" /> 下午 7:00
       </div>
       <div>
-        <img src="./imgs/logoTest/num_icon.jpg" alt="" /> 2位
+        <img src="/logoTest/num_icon.jpg" alt="" /> 2位
       </div>
     </div>
   </div>

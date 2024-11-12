@@ -39,8 +39,8 @@ export default function Index() {
                 <div className={style.selectionBox}>
                     <div className={style.selectionTitle}>選擇時間、人數</div>
                     <div className={`${style.box} ${style.box1}`}>人數</div>
-                    <div className={`${style.box} ${style.box2}`}>2024年10月24日</div>
-                    <div className={`${style.box} ${style.box3}`}>下午 7:00</div>
+                    <div className={`${style.box} ${style.box2}`}>日期</div>
+                    <div className={`${style.box} ${style.box3}`}>時間</div>
                     <div className={`${style.box} ${style.box3}`}>送出</div>
                 </div>
             </div>

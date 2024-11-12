@@ -1,5 +1,6 @@
 import React from 'react'
 import style from '@/styles/restaurantPage.module.css'
+import Link from 'next/link'
 
 export default function Index() {
   return (
@@ -19,8 +20,10 @@ export default function Index() {
         </div>
       </header>
 
+      
       <div className={style.container}>
-          <div className={style.cardContainer} id="cardContainer1">
+      <Link href="/restaurant/restaurantditail">
+          <div className={style.cardContainer} id="cardContainer1" >
             <div className={style.imageSection}>
               <img
                 src="/restaurantPicture/one/心潮1.jpg"
@@ -44,11 +47,13 @@ export default function Index() {
               </div>
             </div>
             <div className={style.textSection}>
-              <p>這是第一行文字</p>
-              <p>這是第二行文字</p>
+            
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+      
             </div>
           </div>
-        
+          </Link>
 
         <div className={style.cardContainer} id="cardContainer2">
           <div className={style.imageSection}>
