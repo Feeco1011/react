@@ -145,3 +145,51 @@
   justify-content: flex-end;
   gap: 23px;
 }
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 70px;
+  right: 170px;
+  width: 100px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 12px;
+  
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu li a {
+  color: #000;
+ font-size: 12px;
+  text-decoration: none;
+
+}
+
+.menu li:hover {
+  background-color: #f0f0f0;
+}

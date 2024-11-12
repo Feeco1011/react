@@ -8,7 +8,7 @@ import {
   updateProfileAvatar,
 } from '@/services/user'
 import { useAuth } from '@/hooks/use-auth'
-// import toast, { Toaster } from 'react-hot-toast'
+import toast, { Toaster } from 'react-hot-toast'
 import PreviewUploadImage from '@/components/user-test/preview-upload-image'
 import { avatarBaseUrl } from '@/configs'
 
@@ -89,7 +89,6 @@ export default function Profile() {
 
   return (
     <>
-      <h1>會員資料修改(一般)</h1>
       <hr />
       <p>
         規則: username與email不能修改(這與註冊機制或網站會員的安全機制的有關)
@@ -99,7 +98,6 @@ export default function Profile() {
         <Link href="/test/user/profile-password">會員資料修改(密碼)</Link>
       </p>
       <hr />
-
       {hasProfile ? (
         <PreviewUploadImage
           avatarImg={userProfile.avatar}
@@ -112,98 +110,107 @@ export default function Profile() {
           <img src="/blank.webp" alt="" width="200" height="200" />
         </div>
       )}
-
-
+     
       <div>
-      <Member />
-      <div className={styles.card1}>
-        <b className={styles.b1}>修改個人資訊</b>
-        <div className={styles.info1}>
-          <div className={styles.inputGroup}>
-            <label className={styles.name} htmlFor="userName">姓名</label>
-            <input
-              type="text"
-              className={styles.input}
-              placeholder="請輸入姓名"
-              id="userName"
-              name="name"
-              value={userProfile.name}
-              onChange={handleFieldChange}
-            />
-          </div>
-
-          <div className={styles.sexGroup}>
-            <div className={styles.div8}>
-              <p className={styles.p}>性別</p>
+        <Member />
+        <div className={styles.card1}>
+          <b className={styles.b1}>修改個人資訊</b>
+          <div className={styles.info1}>
+            <div className={styles.inputGroup}>
+              <label className={styles.name} htmlFor="userName">
+                姓名
+              </label>
+              <input
+                type="text"
+                className={styles.input}
+                placeholder="請輸入姓名"
+                id="userName"
+                name="name"
+                value={userProfile.name}
+                onChange={handleFieldChange}
+              />
             </div>
-            <div className={styles.sex}>
-              <label>
-                <input
-                  type="radio"
-                  name="sex"
-                  value="male"
-                  checked={userProfile.sex === 'male'}
-                  onChange={handleFieldChange}
-                />
-                男性
+
+            <div className={styles.sexGroup}>
+              <div className={styles.div8}>
+                <p className={styles.p}>性別</p>
+              </div>
+              <div className={styles.sex}>
+                <label>
+                  <input
+                    type="radio"
+                    name="sex"
+                    value="male"
+                    checked={userProfile.sex === 'male'}
+                    onChange={handleFieldChange}
+                  />
+                  男性
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="sex"
+                    value="female"
+                    checked={userProfile.sex === 'female'}
+                    onChange={handleFieldChange}
+                  />
+                  女性
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="sex"
+                    value="other"
+                    checked={userProfile.sex === 'other'}
+                    onChange={handleFieldChange}
+                  />
+                  其他
+                </label>
+              </div>
+            </div>
+
+            <div className={styles.inputGroup1}>
+              <label className={styles.div6} htmlFor="phone">
+                電話號碼
               </label>
-              <label>
-                <input
-                  type="radio"
-                  name="sex"
-                  value="female"
-                  checked={userProfile.sex === 'female'}
-                  onChange={handleFieldChange}
-                />
-                女性
+              <input
+                type="tel"
+                className={styles.input}
+                placeholder="請輸入電話號碼"
+                id="phone"
+                name="phone"
+                value={userProfile.phone}
+                onChange={handleFieldChange}
+              />
+            </div>
+
+            <div className={styles.inputGroup2}>
+              <label className={styles.div6} htmlFor="email">
+                電子信箱
               </label>
-              <label>
-                <input
-                  type="radio"
-                  name="sex"
-                  value="other"
-                  checked={userProfile.sex === 'other'}
-                  onChange={handleFieldChange}
-                />
-                其他
-              </label>
+              <input
+                type="email"
+                className={styles.input}
+                placeholder="請輸入電子信箱"
+                id="email"
+                value={auth.userData.email}
+                disabled
+              />
             </div>
           </div>
 
-          <div className={styles.inputGroup1}>
-            <label className={styles.div6} htmlFor="phone">電話號碼</label>
-            <input
-              type="tel"
-              className={styles.input}
-              placeholder="請輸入電話號碼"
-              id="phone"
-              name="phone"
-              value={userProfile.phone}
-              onChange={handleFieldChange}
-            />
-          </div>
-
-          <div className={styles.inputGroup2}>
-            <label className={styles.div6} htmlFor="email">電子信箱</label>
-            <input
-              type="email"
-              className={styles.input}
-              placeholder="請輸入電子信箱"
-              id="email"
-              value={auth.userData.email}
-              disabled
-            />
+          <div className={styles.div16}>
+            <div className={styles.savePc}>
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className={styles.savePcChild}
+              >
+                儲存
+              </button>
+            </div>
           </div>
         </div>
-
-        <div className={styles.div16}>
-          <div className={styles.savePc}>
-            <button type="button" onClick={handleSubmit} className={styles.savePcChild}>
-              儲存
-            </button>
-          </div>
-        </div>
-      </div>
       </div>
     </>
   )

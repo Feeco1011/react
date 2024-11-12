@@ -224,6 +224,11 @@
   right: 30px;
   bottom: 9px;
 }
+
+.registergroup2 a{
+  text-decoration: none;
+  color: #7db9de;
+}
 .tosignup {
   position: relative;
   font-size: 22px;
@@ -236,6 +241,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  color: #7db9de;
+}
+
+.logingrorp2 a{
+  text-decoration: none;
   color: #7db9de;
 }
 .registergroup2 {
