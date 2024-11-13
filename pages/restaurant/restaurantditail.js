@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 import style from '@/styles/restaurantditail.module.css'
+import Link from 'next/link'
 
 export default function Index() {
+    const [people, setPeople] = useState("人數");
+    const [time, setTime] = useState("時間");
+
+    const handlePeopleChange = (e) => {
+        setPeople(e.target.value);
+    };
+
+    const handleTimeChange = (e) => {
+        setTime(e.target.value);
+    };
+
+    const [selectedDate, setSelectedDate] = useState(new Date());
     return (
         <>
         <title>餐廳訂位頁面</title>
@@ -36,13 +51,39 @@ export default function Index() {
                         className={style.rightImage}
                     />
                 </div>
-                <div className={style.selectionBox}>
-                    <div className={style.selectionTitle}>選擇時間、人數</div>
-                    <div className={`${style.box} ${style.box1}`}>人數</div>
-                    <div className={`${style.box} ${style.box2}`}>日期</div>
-                    <div className={`${style.box} ${style.box3}`}>時間</div>
-                    <div className={`${style.box} ${style.box3}`}>送出</div>
-                </div>
+                <div className={style.selectionBox}> 
+            <div className={style.selectionTitle}>選擇時間、人數</div>
+            
+            {/* 人數下拉式選單 */}
+            <select className={`${style.box} ${style.box1}`} value={people} onChange={handlePeopleChange}>
+                <option disabled>人數</option>
+                {Array.from({ length: 20 }, (_, i) => i + 1).map(num => (
+                    <option key={num} value={num}>{num} 人</option>
+                ))}
+            </select>
+       
+            <DatePicker
+            className={`${style.box} ${style.box2}`}
+            calendarClassName={style.customDatepickerInput}
+                selected={selectedDate}
+                onChange={(date) => setSelectedDate(date)}
+                dateFormat="yyyy年MM月dd日"
+                minDate={new Date()}  // 禁止選擇當天以前的日期
+            />
+        
+            {/* 時間下拉式選單 */}
+            <select className={`${style.box} ${style.box3}`} value={time} onChange={handleTimeChange}>
+                <option disabled>時間</option>
+                {Array.from({ length: 19 }, (_, i) => `${11 + Math.floor(i / 2)}:${i % 2 === 0 ? '00' : '30'}`).map(time => (
+                    <option key={time} value={time}>{time}</option>
+                ))}
+            </select>
+
+            {/* 送出按鈕 */}
+            <Link href="/restaurant/reservation1">
+            <div className={`${style.box} ${style.box3}`}>送出</div>
+            </Link>
+        </div>
             </div>
 
             <div className={`${style.container} ${style.introduction}`}>

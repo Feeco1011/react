@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import style from '@/styles/test.module.css';
 
 export default function Index() {
     const [people, setPeople] = useState("人數");
-    const [date, setDate] = useState("日期");
     const [time, setTime] = useState("時間");
 
     const handlePeopleChange = (e) => {
         setPeople(e.target.value);
     };
 
-    const handleDateChange = (e) => {
-        setDate(e.target.value);
-    };
-
     const handleTimeChange = (e) => {
         setTime(e.target.value);
     };
+
+    const [selectedDate, setSelectedDate] = useState(null);
 
     return (
         <div className={style.selectionBox}> 
@@ -29,16 +28,17 @@ export default function Index() {
                     <option key={num} value={num}>{num} 人</option>
                 ))}
             </select>
-
-            {/* 日期選擇器 */}
-            <input 
-                type="date" 
-                className={`${style.box} ${style.box2}`} 
-                value={date} 
-                onChange={handleDateChange}
-                min={new Date().toISOString().split("T")[0]} // 禁止選擇當日以前的日期
+       
+            <DatePicker
+            className={`${style.box} ${style.box2}`}
+            calendarClassName={style.customDatepickerInput}
+                selected={selectedDate}
+                onChange={(date) => setSelectedDate(date)}
+                dateFormat="yyyy年MM月dd日"
+                minDate={new Date()}  // 禁止選擇當天以前的日期
+                placeholderText="選擇日期"
             />
-
+        
             {/* 時間下拉式選單 */}
             <select className={`${style.box} ${style.box3}`} value={time} onChange={handleTimeChange}>
                 <option disabled>時間</option>
