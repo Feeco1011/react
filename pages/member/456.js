@@ -1,87 +1,122 @@
-import styles from '@/styles/profile.module.css'
+import styles from '@/styles/login.module.css'
 import { FaUser, FaCamera } from 'react-icons/fa6'
 import { FaSearch } from 'react-icons/fa'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Member from '@/components/member/member'
+import { useAuth } from '@/hooks/use-auth'
 
-export default function Password() {
-  const [pass, setPass] = useState('')
-  const [show, setShow] = useState(false)
-  const [oldPass, setOldPass] = useState('')
-  const [newPass, setNewPass] = useState('')
-  const [confirmPass, setConfirmPass] = useState('')
-  const [showOldPass, setShowOldPass] = useState(false)
+const Login = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const { auth, login, logout } = useAuth()
+
+  // input-password
+  // const [newPass, setNewPass] = useState('')
+  // const [confirmPass, setConfirmPass] = useState('')
+  // 呈現密碼用
   const [showNewPass, setShowNewPass] = useState(false)
   const [showConfirmPass, setShowConfirmPass] = useState(false)
 
-  return (
-    <Member>
-       
-      <div className={styles.card1}>
-        <b className={styles.b1}>變更密碼</b>
-        <div className={styles.passwordinfo1}>
-          <div className={styles.inputGroup}>
-            <label className={styles.div100} htmlFor="oldPassword">舊密碼</label>
-            <input
-              type={showOldPass ? 'text' : 'password'}
-              value={oldPass}
-              className={styles.input}
-              placeholder="請輸入舊密碼"
-              id="oldPassword"
-              onChange={(e) => setOldPass(e.target.value)}
-            />
-            <button
-              className={styles.showpass}
-              onClick={() => setShowOldPass(!showOldPass)}
-            >
-              {showOldPass ? '顯示' : '不顯示'}
-            </button>
-          </div>
-
-          <div className={styles.inputGroup1}>
-            <label className={styles.div100} htmlFor="newPassword">新密碼</label>
-            <input
-              type={showNewPass ? 'text' : 'password'}
-              value={newPass}
-              className={styles.input}
-              placeholder="請輸入新密碼"
-              id="newPassword"
-              onChange={(e) => setNewPass(e.target.value)}
-            />
-            <button
-              className={styles.showpass}
-              onClick={() => setShowNewPass(!showNewPass)}
-            >
-              {showNewPass ? '顯示' : '不顯示'}
-            </button>
-          </div>
-
-          <div className={styles.inputGroup2}>
-            <label className={styles.div100} htmlFor="confirmPassword">確認新密碼</label>
-            <input
-              type={showConfirmPass ? 'text' : 'password'}
-              value={confirmPass}
-              className={styles.input}
-              placeholder="再次確認新密碼"
-              id="confirmPassword"
-              onChange={(e) => setConfirmPass(e.target.value)}
-            />
-            <button
-              className={styles.showpass}
-              onClick={() => setShowConfirmPass(!showConfirmPass)}
-            >
-              {showConfirmPass ? '顯示' : '不顯示'}
-            </button>
+  const loginForm = (
+    <div className={styles.profile}>
+      <div className={styles.signincard}>
+        <b className={styles.b}>會員登入</b>
+        <div className={styles.info} />
+        <div className={styles.alllogin}>
+          <button type="button" className={styles.child}  onClick={() => {
+          login(email, password)
+        }}>
+            會員登入
+          </button>
+        </div>
+        {/* <b className={styles.b1}>會員登入</b> */}
+        <div className={styles.logingrorp1}>
+          <b className={styles.memberyet}>尚未註冊會員?</b>
+          <div className={styles.logingrorp2}>
+            <Link href="registerfinal" className={styles.tosignup}>
+              會員註冊
+            </Link>
+            {/* <b className={styles.tosignup}>會員註冊</b> */}
           </div>
         </div>
+        <div className={styles.login}>
+          <div className={styles.inputGroup}>
+            {/* <div className={styles.item} /> */}
+          </div>
 
-        <div className={styles.div16}>
-          <div className={styles.savePc2}>
-            <button type="button" className={styles.savePcChild}>儲存</button>
+          <div className={styles.div14}>
+            <div className={styles.div15}>
+              <div className={styles.div16}>
+                <div className={styles.profileInfo}>
+                  <div className={styles.inputGroup2}>
+                    <label className={styles.div13} htmlFor="email">電子信箱</label>
+                    <input
+                      type="email"
+                      className={styles.input}
+                      placeholder="請輸入電子信箱"
+                      id="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => {
+                        
+                        setEmail(e.target.value)
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className={styles.div18}>
+                <label className={styles.div13} htmlFor="password">密碼</label>
+                <input
+                  type={showNewPass ? 'text' : 'password'}
+                  value={password}
+                className={styles.input}
+                  placeholder="請輸入密碼"
+                  id="password"
+                  name="password"
+                  onChange={(e) => {
+                    setPassword(e.target.value)
+                  }}
+                />
+              </div>
+
+              <button
+                className={styles.showloginpass}
+                onClick={() => {
+                  setShowNewPass(!showNewPass)
+                }}
+              >
+                {showNewPass ? '顯示' : '不顯示'}
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </Member>
+    </div>
+ 
+  )
+  const logoutForm = (
+    <>
+      <button
+        onClick={() => {
+          logout()
+        }}
+      >
+        登出
+      </button>
+    </>
+  )
+  return (
+    <>
+    
+      <p>目前會員登入狀態: {auth?.isAuth ? '已登入' : '未登入'}</p>
+      {/* Link元件一樣會渲染為a連結，但頁面不會重新刷新，讓狀態在不同頁面切換時可以繼續保持 */}
+      {/* <Link href="/member/profile">連至 個人資料頁(Link元件)</Link> */}
+      <hr />
+      {auth?.isAuth ? logoutForm : loginForm}
+    </>
   )
 }
+
+export default Login

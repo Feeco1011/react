@@ -7,18 +7,13 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Image from 'next/image'
 
-
-
-
-
-
 export default function Navbar() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
-      
-const [menuOpen, setMenuOpen] = useState(false)
+
+  const [menuOpen, setMenuOpen] = useState(false)
 
 
   return (
@@ -32,7 +27,7 @@ const [menuOpen, setMenuOpen] = useState(false)
     <div className={styles.header}>
       <div className={styles.logoParent}>
         <div className={styles.logo}>
-          <a href="index.js">
+          <a href="index123">
             <img
               src="/taiwango.png"
               alt=""
@@ -88,6 +83,9 @@ const [menuOpen, setMenuOpen] = useState(false)
             {menuOpen && (
               <div className={styles.menu}>
                  <ul>
+                 {/* <li>{user.name}</li> */}
+
+
                  <li> <Link href="/member/edit-profile">修改個人資訊</Link></li>
 
                  <li><Link href="/member/change-password">變更密碼</Link></li>
@@ -98,7 +96,7 @@ const [menuOpen, setMenuOpen] = useState(false)
 
                  <li><Link href="/member/my-blog">我的論壇</Link></li>
 
-                 <li><Link href="/index">登出</Link></li>
+                 <li><Link href="/member/logout">登出</Link></li>
                
                 </ul>
               </div>

@@ -90,31 +90,11 @@ const Login = () => {
                 {showNewPass ? '顯示' : '不顯示'}
               </button>
             </div>
-            {/* <div className={styles.div20}>
-              <label className={styles.div13} htmlFor="confirmPassword">確認密碼</label>
-              <input
-                type={showConfirmPass ? 'text' : 'password'}
-                value={confirmPass}
-                className={styles.input}
-                placeholder="再次確認密碼"
-                id="confirmPassword"
-                onChange={(e) => {
-                  setConfirmPass(e.target.value)
-                }}
-              />
-            </div>
-            <button
-              className={styles.loginconfirmshowpass}
-              onClick={() => {
-                setShowConfirmPass(!showConfirmPass)
-              }}
-            >
-              {showConfirmPass ? '顯示' : '不顯示'}
-            </button> */}
           </div>
         </div>
       </div>
     </div>
+ 
   )
 }
 

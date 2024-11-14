@@ -236,7 +236,7 @@ export function AuthProvider({ children }) {
           setTimeout(() => {
             alert('無進入權限，請先登入!')
             router.push(loginRoute)
-          }, 1500)
+          }, 1500000)
         }
       }
     } catch (e) {
