@@ -1,33 +1,23 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import ForumCard from '@/components/forum/forumCard'
-import styles from '@/styles/bolg.module.css'
+import styles from '@/styles/index.module.css'
 import ForumCardB from '@/components/forum/forumCardB'
 import { useRouter } from 'next/router'
 
 export default function Index() {
   const [pop, setPop] = useState([]) // 假設這些是需要從 API 獲取的數據
-<<<<<<< HEAD
-  const [city, setCity] = useState([])
-  const [category, setCategory] = useState([])
-  const [view, setView] = useState([])
-=======
   const [view, setView] = useState([])
   const [category, setCategory] = useState([])
   const [city, setCity] = useState([])
 
->>>>>>> main
   const router = useRouter()
 
   useEffect(() => {
     // 用來獲取熱門文章資料
     const fetchSinglePop = async () => {
       try {
-<<<<<<< HEAD
-        const url = "http://localhost:3001/posts" // 加上引號
-=======
         const url = 'http://localhost:3005/api/posts' // 加上引號
->>>>>>> main
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -47,13 +37,11 @@ export default function Index() {
     fetchSinglePop()
   }, [router.query.postId]) // 依賴於 router.query.postId
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     // 用來獲取景點文章資料
     const fetchSingleView = async () => {
       try {
-        const url = 'http://localhost:3005/vposts' // 加上引號
+        const url = 'http://localhost:3005/api/vposts' // 加上引號
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -77,7 +65,7 @@ export default function Index() {
     // 用來獲取分類文章資料
     const fetchSingleCategory = async () => {
       try {
-        const url = 'http://localhost:3001/catoposts' // 加上引號
+        const url = 'http://localhost:3005/api/catoposts' // 加上引號
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -101,7 +89,7 @@ export default function Index() {
     // 用來獲取城市文章資料
     const fetchSingleCity = async () => {
       try {
-        const url = 'http://localhost:3001/cityposts' // 加上引號
+        const url = 'http://localhost:3005/api/cityposts' // 加上引號
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -121,111 +109,91 @@ export default function Index() {
     fetchSingleCity()
   }, [router.query.postId]) // 依賴於 router.query.postId
 
->>>>>>> main
   return (
     <>
-      <div className={styles.popwell}>
-        <br />
-        <div className={styles.word}>
-          <div className={styles.title}>熱門</div>
-        </div>
-        <br />
-        <div style={{ display: 'flex', gap: '20px' }}>
-          {pop.map((p) => (
-<<<<<<< HEAD
-            <Link href={`/blog/${p.id}`} key={p.id}> {/* 修正 href 字串模板 */}
-              <ForumCardB pop={p} eddie={'王緯宸'} />
-=======
-            <Link href={`/blog/${p.id}`} key={p.id}>
-              {' '}
-              {/* 修正 href 字串模板 */}
-              <ForumCardB pop={p} />
->>>>>>> main
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <br />
-      <div className={styles.viewwell}>
-        <div className={styles.word}>
-          <div className={styles.title}>景點</div>
-        </div>
-        <br />
-        <div style={{ display: 'flex', gap: '20px' }}>
-<<<<<<< HEAD
-          {view.map((item) => (
-            <Link href={`/blog/${item.id}`} key={item.id}> {/* 修正 href 字串模板 */}
-              <ForumCard data={item} />
-=======
-          {view.map((v) => (
-            <Link href={`/blog/${v.id}`} key={v.id}>
-              {' '}
-              {/* 修正 href 字串模板 */}
-              <ForumCard view={v} />
->>>>>>> main
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <br />
-      <div className={styles.category}>
-        <div className={styles.word}>
-          <div className={styles.title1}>
-            歷史古蹟 | 舒適休閒 | 自然環境 | 人文藝術
+      <div className={styles.container}>
+        <div className={styles.popwell}>
+          <br />
+          <div className={styles.word}>
+            <div className={styles.title}>熱門</div>
+          </div>
+          <br />
+          <div className={styles.had}>
+            {pop.map((p) => (
+              <Link href={`/blog/${p.id}`} key={p.id}>
+                {' '}
+                {/* 修正 href 字串模板 */}
+                <ForumCardB pop={p} />
+              </Link>
+            ))}
           </div>
         </div>
+
         <br />
-        <select>
-          <option>歷史古蹟</option>
-          <option>舒適休閒</option>
-          <option>自然環境</option>
-          <option>人文藝術</option>
-        </select>
-
-        <div style={{ display: 'flex', gap: '20px' }}>
-<<<<<<< HEAD
-          {category.map((item) => (
-            <Link href={`/blog/${item.id}`} key={item.id}> {/* 修正 href 字串模板 */}
-              <ForumCard data={item} />
-=======
-          {category.map((v) => (
-            <Link href={`/blog/${v.id}`} key={v.id}>
-              {' '}
-              {/* 修正 href 字串模板 */}
-              <ForumCard category={v} />
->>>>>>> main
-            </Link>
-          ))}
+        <div className={styles.viewwell}>
+          <div className={styles.word}>
+            <div className={styles.title}>景點</div>
+          </div>
+          <br />
+          <div className={styles.had}>
+            {view.map((v) => (
+              <Link href={`/blog/${v.id}`} key={v.id}>
+                {' '}
+                {/* 修正 href 字串模板 */}
+                <ForumCard view={v} />
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <br />
-      <div className={styles.cityy}>
-        <div className={styles.word}>
-          <div className={styles.title1}>城市</div>
-        </div>
         <br />
-        <select>
-          <option>台北</option>
-          <option>新北</option>
-          <option>基隆</option>
-          {/* ...其他城市選項 */}
-        </select>
+        <div className={styles.category}>
+          <div className={styles.word}>
+            <div className={styles.title1}>
+              歷史古蹟 | 舒適休閒 | 自然環境 | 人文藝術
+            </div>
+          </div>
+          <br />
+          <select>
+            <option>歷史古蹟</option>
+            <option>舒適休閒</option>
+            <option>自然環境</option>
+            <option>人文藝術</option>
+          </select>
 
-        <div style={{ display: 'flex', gap: '20px' }}>
-          {city.map((item) => (
-<<<<<<< HEAD
-            <Link href={`/blog/${item.id}`} key={item.id}> {/* 修正 href 字串模板 */}
-=======
-            <Link href={`/blog/${item.id}`} key={item.id}>
-              {' '}
-              {/* 修正 href 字串模板 */}
->>>>>>> main
-              <ForumCard data={item} />
-            </Link>
-          ))}
+          <div className={styles.had}>
+            {category.map((v) => (
+              <Link href={`/blog/${v.id}`} key={v.id}>
+                {' '}
+                {/* 修正 href 字串模板 */}
+                <ForumCard category={v} />
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <br />
+        <div className={styles.cityy}>
+          <div className={styles.word}>
+            <div className={styles.title1}>城市</div>
+          </div>
+          <br />
+          <select>
+            <option>台北</option>
+            <option>新北</option>
+            <option>基隆</option>
+            {/* ...其他城市選項 */}
+          </select>
+
+          <div className={styles.had}>
+            {city.map((item) => (
+              <Link href={`/blog/${item.id}`} key={item.id}>
+                {' '}
+                {/* 修正 href 字串模板 */}
+                <ForumCard data={item} />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </>
