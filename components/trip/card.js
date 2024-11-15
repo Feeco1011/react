@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styles from '@/styles/new.module.css'
+import styles from '@/styles/tripcard.module.css'
 
 export default function ForumCard(props) {
   // console.log(props.data)
