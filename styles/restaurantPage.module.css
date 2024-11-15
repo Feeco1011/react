@@ -16,6 +16,14 @@
   justify-content: center;
 }
 
+<<<<<<< HEAD
+=======
+.container a {
+  text-decoration: none;
+  color: black;
+}
+
+>>>>>>> main
 .header {
   justify-content: space-between;
 }

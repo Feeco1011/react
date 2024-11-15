@@ -1,0 +1,63 @@
+.horizontalList {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;對齊交錯軸線中央 */
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container p {
+  font-size: 20px;
+}
+/* .container div{
+  font-size:20px;
+} */
+.button {
+  background-color: aliceblue;
+}
+
+.featureContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* 每個項目之間的間距 */
+  justify-content: center; /* 項目水平居中 */
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 圖標和文字居中對齊 */
+  text-align: center; /* 文字居中 */
+  width: 6rem; /* 每個項目的固定寬度 */
+}
+
+.featureIcon {
+  display: block;
+  max-width: 3rem; /* 圖片最大寬度 */
+  max-height: 3rem; /* 圖片最大高度 */
+  margin-bottom: 0.5rem; /* 圖片和文字之間的間距 */
+}
+
+.featureLabel {
+  font-size: 0.9rem; /* 文字大小 */
+  color: #555; /* 文字顏色 */
+}
+
+
+@media (max-width: 600px) {
+  .element {
+    font-size: 0.8rem; /* 小螢幕下字體變小 */
+  }
+}
+@media (min-width: 1200px) {
+  .element {
+    font-size: 2rem; /* 大螢幕下字體變大 */
+  }
+}

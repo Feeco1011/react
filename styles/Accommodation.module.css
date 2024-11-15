@@ -1,0 +1,201 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  appearance: none;
+  outline: none;
+  margin-right: 10px;
+}
+
+.filters select:focus {
+  border-color: #3b82f6;
+}
+
+.filters button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #2563eb;
+}
+
+.accommodationItem a {
+  text-decoration: none;
+  color: black;
+}
+
+.accommodationList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%; /*  改為 100% */
+  max-width: 1440px; /* 設置最大寬度 */
+}
+
+.accommodationItem {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(211, 104, 104, 0.1);
+  overflow: hidden;
+  width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.accommodationImage {
+  width: 100%; /* 改為 100% 以適應容器 */
+  height: 190px;
+  object-fit: cover; /* 讓圖片填滿而不變形 */
+}
+
+.accommodationContent {
+  padding: 15px;
+}
+
+.accommodationContent h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.accommodationContent p {
+  margin: 5px 0;
+}
+/*新增搜尋CSS*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  appearance: none;
+  outline: none;
+  margin-right: 10px;
+}
+
+.filters select:focus {
+  border-color: #3b82f6;
+}
+
+.filters button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #7DB9DE;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #2563eb;
+}
+
+.lastRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.lastRow .accommodationItem {
+  width: calc(40% - 10px); /*每張卡片佔容器的 50% 寬度，留出間距*/
+}
+/* 修改照片區域的樣式 */
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* 控制整體寬度 */
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.photo img {
+  width: calc(16.666% - 17px); /* 計算每張圖片的寬度：(100% / 6) - gap */
+  height: 200px; /* 固定高度以保持一致性 */
+  object-fit: cover; /* 確保圖片填滿且不變形 */
+  border-radius: 8px; /* 圓角效果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  transition: transform 0.2s; /* 添加hover效果的過渡 */
+}
+
+.photo img:hover {
+  transform: scale(1.05); /* hover時稍微放大 */
+}
+/*星星顏色*/
+.star {
+  color: #fc9f4d;
+}
+.star.star2 {
+  color: #000000;
+}
+/* 在小屏幕上的響應式設計 */
+@media (max-width: 1024px) {
+  .photo img {
+    width: calc(33.333% - 14px); /* 三列排列 */
+  }
+}
+
+@media (max-width: 768px) {
+  .photo img {
+    width: calc(50% - 10px); /* 兩列排列 */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo img {
+    width: 100%; /* 單列排列 */
+  }
+}
