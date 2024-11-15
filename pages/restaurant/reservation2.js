@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '@/styles/reservation2.module.css'
-
+import Link from 'next/link'
 export default function Index() {
   return (
     <>
@@ -27,9 +27,7 @@ export default function Index() {
   </div>
   <div className={style.selectShowing}>場合:周年紀念</div>
   <div className={style.textareashowing}>特殊需求:</div>
-  <a href="">
-    <button className={style.finsh}>更改訂位</button>
-  </a>
+    <button className={style.finsh}>取消訂位</button>
 </div>
  
  </>

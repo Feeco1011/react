@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '@/styles/reservation1.module.css'
-
+import Link from 'next/link'
 export default function Index() {
   return (
     <>
@@ -33,9 +33,9 @@ export default function Index() {
     </select>
     <textarea className={style.textarea} placeholder="新增特殊要求(選填)"></textarea>
   </div>
-  <a href="">
+  <Link href="/restaurant/reservation2">
     <button className={style.finsh}>完成訂位</button>
-  </a>
+    </Link>
 </div>
 
     </>
