@@ -87,11 +87,7 @@
       }
 
       .box {
-<<<<<<< HEAD
-        width: 288px;
-=======
         width: 296px;
->>>>>>> main
         height: 67px;
         background-color: #7db9de;
         border-radius: 5px;
@@ -103,8 +99,6 @@
         font-size: 16px;
         text-align: center;
       }
-<<<<<<< HEAD
-=======
       .box2 {
         width: 288px;
         height: 60px;
@@ -119,7 +113,6 @@
         font-size: 16px;
         text-align: center;
       }
->>>>>>> main
       .introduction {
         width: 40%;
         height: auto;

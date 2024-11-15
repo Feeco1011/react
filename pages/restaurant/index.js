@@ -6,20 +6,6 @@ export default function Index() {
   return (
     <>
       <title>餐廳列表頁面</title>
-      <header className={style.header}>
-        <div className={style.logo}>
-          <img src="/logoTest/logoTest-removebg-preview.png" alt="Logo" />
-        </div>
-        <div className={style.headerLinks}>
-          <a href="" className={`${style.headerLinks} ${style.link}`}>
-            註冊
-          </a>
-          <a href="" className={`${style.headerLinks} ${style.link}`}>
-            登入
-          </a>
-        </div>
-      </header>
-
       
       <div className={style.container}>
       <Link href="/restaurant/restaurantditail">
