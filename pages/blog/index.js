@@ -7,16 +7,27 @@ import { useRouter } from 'next/router'
 
 export default function Index() {
   const [pop, setPop] = useState([]) // 假設這些是需要從 API 獲取的數據
+<<<<<<< HEAD
   const [city, setCity] = useState([])
   const [category, setCategory] = useState([])
   const [view, setView] = useState([])
+=======
+  const [view, setView] = useState([])
+  const [category, setCategory] = useState([])
+  const [city, setCity] = useState([])
+
+>>>>>>> main
   const router = useRouter()
 
   useEffect(() => {
     // 用來獲取熱門文章資料
     const fetchSinglePop = async () => {
       try {
+<<<<<<< HEAD
         const url = "http://localhost:3001/posts" // 加上引號
+=======
+        const url = 'http://localhost:3005/api/posts' // 加上引號
+>>>>>>> main
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -36,6 +47,81 @@ export default function Index() {
     fetchSinglePop()
   }, [router.query.postId]) // 依賴於 router.query.postId
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    // 用來獲取景點文章資料
+    const fetchSingleView = async () => {
+      try {
+        const url = 'http://localhost:3005/vposts' // 加上引號
+        const response = await fetch(url)
+
+        // 確認是否成功返回資料
+        if (!response.ok) {
+          throw new Error('Failed to fetch popular view')
+        }
+
+        const data = await response.json()
+        console.log(data)
+
+        setView(data) // 設置景點文章資料
+      } catch (error) {
+        console.error('Error fetching popular View:', error)
+      }
+    }
+
+    fetchSingleView()
+  }, [router.query.postId]) // 依賴於 router.query.postId
+
+  useEffect(() => {
+    // 用來獲取分類文章資料
+    const fetchSingleCategory = async () => {
+      try {
+        const url = 'http://localhost:3001/catoposts' // 加上引號
+        const response = await fetch(url)
+
+        // 確認是否成功返回資料
+        if (!response.ok) {
+          throw new Error('Failed to fetch popular Category')
+        }
+
+        const data = await response.json()
+        console.log(data)
+
+        setCategory(data) // 設置分類文章資料
+      } catch (error) {
+        console.error('Error fetching popular category:', error)
+      }
+    }
+
+    fetchSingleCategory()
+  }, [router.query.postId]) // 依賴於 router.query.postId
+
+  useEffect(() => {
+    // 用來獲取城市文章資料
+    const fetchSingleCity = async () => {
+      try {
+        const url = 'http://localhost:3001/cityposts' // 加上引號
+        const response = await fetch(url)
+
+        // 確認是否成功返回資料
+        if (!response.ok) {
+          throw new Error('Failed to fetch popular city')
+        }
+
+        const data = await response.json()
+        console.log(data)
+
+        setCity(data) // 設置城市文章資料
+      } catch (error) {
+        console.error('Error fetching popular posts:', error)
+      }
+    }
+
+    fetchSingleCity()
+  }, [router.query.postId]) // 依賴於 router.query.postId
+
+>>>>>>> main
   return (
     <>
       <div className={styles.popwell}>
@@ -46,8 +132,15 @@ export default function Index() {
         <br />
         <div style={{ display: 'flex', gap: '20px' }}>
           {pop.map((p) => (
+<<<<<<< HEAD
             <Link href={`/blog/${p.id}`} key={p.id}> {/* 修正 href 字串模板 */}
               <ForumCardB pop={p} eddie={'王緯宸'} />
+=======
+            <Link href={`/blog/${p.id}`} key={p.id}>
+              {' '}
+              {/* 修正 href 字串模板 */}
+              <ForumCardB pop={p} />
+>>>>>>> main
             </Link>
           ))}
         </div>
@@ -60,9 +153,17 @@ export default function Index() {
         </div>
         <br />
         <div style={{ display: 'flex', gap: '20px' }}>
+<<<<<<< HEAD
           {view.map((item) => (
             <Link href={`/blog/${item.id}`} key={item.id}> {/* 修正 href 字串模板 */}
               <ForumCard data={item} />
+=======
+          {view.map((v) => (
+            <Link href={`/blog/${v.id}`} key={v.id}>
+              {' '}
+              {/* 修正 href 字串模板 */}
+              <ForumCard view={v} />
+>>>>>>> main
             </Link>
           ))}
         </div>
@@ -84,9 +185,17 @@ export default function Index() {
         </select>
 
         <div style={{ display: 'flex', gap: '20px' }}>
+<<<<<<< HEAD
           {category.map((item) => (
             <Link href={`/blog/${item.id}`} key={item.id}> {/* 修正 href 字串模板 */}
               <ForumCard data={item} />
+=======
+          {category.map((v) => (
+            <Link href={`/blog/${v.id}`} key={v.id}>
+              {' '}
+              {/* 修正 href 字串模板 */}
+              <ForumCard category={v} />
+>>>>>>> main
             </Link>
           ))}
         </div>
@@ -107,7 +216,13 @@ export default function Index() {
 
         <div style={{ display: 'flex', gap: '20px' }}>
           {city.map((item) => (
+<<<<<<< HEAD
             <Link href={`/blog/${item.id}`} key={item.id}> {/* 修正 href 字串模板 */}
+=======
+            <Link href={`/blog/${item.id}`} key={item.id}>
+              {' '}
+              {/* 修正 href 字串模板 */}
+>>>>>>> main
               <ForumCard data={item} />
             </Link>
           ))}

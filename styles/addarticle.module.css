@@ -1,0 +1,29 @@
+.container {
+    max-width: 1440px;
+   
+    padding-left:144px;
+    padding-right:144px;
+}
+
+.textarea{
+    width: 500px;
+}
+
+
+
+.button1 {
+    width: 112px;
+    height: 35px;
+    background-color: #FC9F4D;
+    border-radius: 80px;
+    color: white;
+    text-align: center;
+    border: 0;
+}
+
+.wq {
+    background-color: #FC9F4D;
+    border-radius: 80px;
+    color: white;
+    
+}

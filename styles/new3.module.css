@@ -1,0 +1,69 @@
+.had {
+    width: 75%;
+    padding-right: 144px;
+    padding-left: 144px;
+    padding-bottom: 10px;
+}
+.card {
+    width:100%;
+    height: 200px;
+    background-color: darkgrey;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.img {
+    width: 72px;
+    height: 72px;
+    border-radius: 48%;
+   
+   
+}
+
+.name {
+    padding-top: 30px;
+}
+
+
+
+
+.profile {
+    text-align: center;
+}
+
+
+
+
+
+.data{
+    width: calc(90% - 72px);
+}
+
+
+.message {
+    width: 90%;
+    height: 120px;
+}
+
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.good {
+    padding-right: 10px;
+}
+.reply {
+    
+    display: flex;
+   
+}
+.liked {
+    color: red; /* 點擊後變紅色 */
+    font-weight: bold;
+  }

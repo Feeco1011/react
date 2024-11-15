@@ -1,0 +1,47 @@
+.footer {
+  background-color: #f2f2f2; /* 背景色 */
+  padding: 20px 0;
+}
+
+.footerContainer {
+  max-width: 1440px; /* 固定寬度 */
+  margin: 0 auto; /* 置中 */
+  display: flex; /* 使用 Flexbox 布局 */
+  color: #333;
+  padding: 20px 0; /* 增加上下內邊距 */
+}
+
+.footerColumn {
+  flex: 1; /* 每一列等寬 */
+  padding: 0 10px;
+  align-items: center; /* 垂直置中 */
+}
+
+.footerColumn h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000; /* 標題顏色 */
+}
+
+.footerColumn ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn ul li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.footerColumn ul li strong {
+  color: #000; /* 加粗的文字顏色 */
+}
+
+@media screen and (max-width: 1920px) {
+  .footer-container {
+    width: calc(100% - 240px); /* 留左右白邊 */
+    max-width: 1440px;
+  }
+}
