@@ -1,0 +1,204 @@
+.title {
+  width: 1152px;
+  position: relative;
+  font-weight: 900;
+  text-align: left;
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.text {
+  position: absolute;
+  top: 85px;
+  left: 20px;
+  width: 257px;
+  height: 39px;
+}
+.p {
+  margin: 0;
+}
+.b {
+  position: absolute;
+  top: 12px;
+  left: 200px;
+  display: inline-block;
+  width: 133px;
+  height: 48px;
+}
+.div3 {
+  position: absolute;
+  top: 68.66px;
+  left: 163px;
+  font-size: 32px;
+  font-weight: 900;
+  color: #f88017;
+  display: inline-block;
+  width: 128.6px;
+  height: 47px;
+  text-shadow: 5px 0 0 #fff, 0 5px 0 #fff, -5px 0 0 #fff, 0 -5px 0 #fff;
+  transform:  rotate(-5.2deg);
+  transform-origin: 0 0;
+}
+
+.div2 {
+  width: 350px;
+  position: relative;
+  height: 111px;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-family: Roboto;
+}
+
+
+.b1 {
+  position: absolute;
+  top: 14px;
+  left: 43px;
+  display: inline-block;
+  width: 254px;
+  height: 52px;
+}
+.b2 {
+  position: absolute;
+  top: 4px;
+  left: -32px;
+  display: inline-block;
+  width: 180px;
+  height: 46px;
+}
+.wrapper {
+  position: absolute;
+  top: 33px;
+  left: 101px;
+  border-radius: 10px;
+  background-color: #aa904c;
+  width: 116px;
+  height: 23px;
+}
+.div4 {
+  width: 325px;
+  position: relative;
+  height: 111px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.christmas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 325px;
+  height: 109px;
+  object-fit: cover;
+}
+.b3 {
+  position: absolute;
+  top: 20px;
+  left: 13px;
+  display: inline-block;
+  width: 295px;
+  height: 52px;
+}
+.b4 {
+  position: absolute;
+  top: 72px;
+  left: 79px;
+  font-size: 24px;
+  display: inline-block;
+  color: #f2ca91;
+  width: 214px;
+  height: 40px;
+}
+.merryChristmas {
+  position: absolute;
+  top: 68.15px;
+  left: -7px;
+  display: inline-block;
+  font-family: 'Figma Hand';
+  color: #f8bb65;
+  width: 140px;
+  height: 43px;
+  text-shadow: 1px 0 0 #474747, 0 1px 0 #474747, -1px 0 0 #474747, 0 -1px 0 #474747;
+  transform:  rotate(-9.1deg);
+  transform-origin: 0 0;
+}
+.textParent {
+  width: 325px;
+  position: relative;
+  height: 109px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pics {
+  width: 1130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 61px;
+  font-size: 15px;
+  color: #fff;
+  font-family: 'Sometype Mono';
+  margin-bottom: 25px;
+}
+.dish1Icon {
+  width: 80px;
+  position: relative;
+  height: 80px;
+  object-fit: cover;
+}
+.b5 {
+  position: relative;
+}
+.div5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.div5 a{
+text-decoration: none;
+color: #000;
+}
+
+.text3{
+  position: relative;
+  font-size: 50px;
+  font-weight: 500;
+}
+.icons {
+  width: 1130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 129px;
+  font-size: 20px;
+  font-family: 'Noto Sans TC';
+}
+.div {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 539px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 10px 144px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 32px;
+  color: #000;
+  font-family: Roboto;
+  left: 250px;
+}
+
