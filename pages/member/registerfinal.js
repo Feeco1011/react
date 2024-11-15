@@ -133,22 +133,7 @@ const handleSubmit = async (e) => {
           <button type="submit" className={styles.registerchild}>
             會員註冊
           </button>
-          {/* <button
-          type="button"
-          onClick={() => {
-            setUser({
-              name: '',
-           sex: '',
-           mobile: '',
-           email: '',
-         password: '',
-           confirmPassword: '',
-
-            })
-          }}
-        ></button> */}
         </div>
-        {/* <b className={styles.b1}>會員註冊</b> */}
         <div className={styles.registergroup1}>
           <b className={styles.b2}>已有會員帳號?</b>
           <div className={styles.registergroup2}>
@@ -184,8 +169,6 @@ const handleSubmit = async (e) => {
               <p className={styles.p}>性別</p>
             </div>
             <div className={styles.sex}>
-              {/* <label className={styles.sexChild} > */}
-
               <label class="radio-container">
                 <input type="radio" name="sex" value="male" onChange={handleFieldChange}
               />
