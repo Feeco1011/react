@@ -1,0 +1,81 @@
+.img {
+    width: 45px;
+    height: 45px;
+    padding: 20px;
+    border-radius: 48%;
+}
+
+.name {padding-right: 5px;}
+
+.likeButton {
+    cursor: pointer;
+    color: #555; /* 初始顏色 */
+  }
+  
+  .liked {
+    color: red; /* 點擊後的高亮顏色 */
+    font-weight: bold;
+  }
+
+
+.all {
+    width: auto;
+    display: flex;
+    
+    margin: 20px;     
+    font-family: Arial, sans-serif;
+}
+
+.profile {
+    display: flex;
+    width: 75%;
+   padding-left: 144px;
+   padding-right: 144px;
+    align-items: center;
+}
+.user {
+    padding: 20px;
+}
+
+.action {
+    display: flex;
+}
+
+
+
+.gd {
+     width: 75%;
+    display: flex;
+     flex-direction: row-reverse ;
+     border-bottom:1px solid #FC9F4D  ;
+     align-items: center;
+    
+     margin-left: 9%;
+
+
+
+
+}
+
+
+.p {
+    width: 75%;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-bottom: 10px;
+}
+
+
+.photo {
+    width: 75%;
+    padding-left: 144px;
+ padding-right: 144px;
+  
+
+}
+
+
+
+
+
+
