@@ -387,30 +387,12 @@ const Index = () => {
         </div>
       </div>
       <div className={styles.photo}>
-        <img
-          src="https://hips.hearstapps.com/hmg-prod/images/fotojet-2024-05-20t171442-961-664b14e4e411c.jpg?crop=0.494xw:0.987xh;0,0.0130xh&resize=640:*"
-          alt=""
-        />
-        <img
-          src="https://image.cache.storm.mg/styles/smg-800x533-fp-wm/s3/media/image/2023/06/30/20230630-045412_U16224_M866770_51b0.jpg?itok=VSz0CXAy"
-          alt=""
-        />
-        <img
-          src="https://static.wixstatic.com/media/685d56_89b1058db55a4566af6fd2a461149101~mv2.jpg/v1/fill/w_980,h_655,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/685d56_89b1058db55a4566af6fd2a461149101~mv2.jpg"
-          alt=""
-        />
-        <img
-          src="https://www.hotelkuei.com.tw/en/attractions-detail/upload/fac_m/en_fac_list_19a29_jzt9fk8rw6.jpg"
-          alt=""
-        />
-        <img
-          src="https://dimg04.c-ctrip.com/images/0M75712000arp6z4k69D4_Q60.jpg_.webp"
-          alt=""
-        />
-        <img
-          src="https://img.ltn.com.tw/Upload/business/page/800/2019/03/15/271.jpg"
-          alt=""
-        />
+        <img src="./imge/101.jpg" alt="" />
+        <img src="./imge/20230630-045412_U16224_M866770_51b0.jpg" alt="" />
+        <img src="./imge/1024x768_image1637716343843799600.jpg" alt="" />
+        <img src="./imge/en_fac_list_19a29_jzt9fk8rw6.jpg" alt="" />
+        <img src="./imge/NTC0000085_92382.jpg" alt="" />
+        <img src="./imge/271.jpg" alt="" />
       </div>
     </div>
   )
