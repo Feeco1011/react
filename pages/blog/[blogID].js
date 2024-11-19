@@ -36,6 +36,13 @@ export default function BlogID(props) {
       }
       const data = await response.json()
       setBlogData(data) // 更新 blogData
+      console.log(data)
+      if (data.messages.length > 0) {
+        setMessages(data.messages)
+      }
+      {
+        setMessages(data.messages) //將api中得message  messages 變數
+      }
     } catch (error) {
       console.error('Error fetching blog data:', error)
     }
@@ -85,7 +92,7 @@ export default function BlogID(props) {
 
       <div className={styles1.gd}>
         <div>回復</div>
-        <div>{messages.length}</div>
+        {/* <div>{messages.length}</div> */}
 
         <div
           className={`${styles1.likeButton} ${isLiked ? styles1.liked : ''}`}

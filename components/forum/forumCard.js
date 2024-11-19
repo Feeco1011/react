@@ -24,21 +24,21 @@ export default function ForumCard(props) {
     createdDate: cardData?.pt_created || '未知日期',
     city: cardData?.pt_city || '未知城市',
     description: cardData?.pt_sf || '暫無描述',
-    image:
-      cardData?.pt_img ||
-      'https://media.istockphoto.com/id/1502547874/zh/%E5%90%91%E9%87%8F/travel-to-world-on-banner-background-landscape-template-tourism-cards-road-trip-vacation-as-in.jpg?s=1024x1024&w=is&k=20&c=WJSv71le86s6btsNKlRoMpQP98r1T68Ux7P7B8zo1lo=',
+    // image:
+    //   cardData?.pt_img ||
+    //   'https://media.istockphoto.com/id/1502547874/zh/%E5%90%91%E9%87%8F/travel-to-world-on-banner-background-landscape-template-tourism-cards-road-trip-vacation-as-in.jpg?s=1024x1024&w=is&k=20&c=WJSv71le86s6btsNKlRoMpQP98r1T68Ux7P7B8zo1lo=',
   }
 
   // 添加數據檢查
   console.log('收到的props:', props)
-  console.log('處理後的數據:', userData)
+  console.log('處生成的圖片路徑:', imagePath)
 
   return (
     <div className={styles.hed}>
       <div className={styles.card}>
         <img
           className={styles.img}
-          src={userData.image}
+          src={imagePath}
           alt="景點圖片"
           onError={(e) => {
             e.target.src =
