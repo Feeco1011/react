@@ -49,13 +49,13 @@ text-decoration: none;
   justify-content: flex-end;
 }
 .imageChild {
-  width: 115px;
+  width: 200px;
   position: absolute;
   margin: 0 ;
   top: 0px;
-  left: 13px;
+  left: -20px;
   border-radius: 50%;
-  height: 115px;
+  height: 200px;
   object-fit: cover;
   z-index: 0;
 }
