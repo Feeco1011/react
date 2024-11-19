@@ -128,7 +128,7 @@ const Index = () => {
           title: '福朋喜來登酒店',
           description: '',
           price: 2330,
-          rating: 4,
+          rating: 5,
           city: '新北',
           type: '四人房',
           imageUrl: './imge/16868032835639.jpg',
@@ -200,7 +200,7 @@ const Index = () => {
           price: 1435,
           rating: 4,
           city: '新北',
-          type: '雙人房',
+          type: '單人房',
           imageUrl: './imge/金湧泉溫泉汽車旅館.jpg',
         },
         {
@@ -210,7 +210,7 @@ const Index = () => {
           price: 960,
           rating: 4,
           city: '新北',
-          type: '雙人房',
+          type: '單人房',
           imageUrl: './imge/鼎帥溫泉旅館.jpg',
         },
         {

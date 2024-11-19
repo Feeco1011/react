@@ -48,7 +48,7 @@ export default function HotelDetail() {
 
     setHotelData({
       id: router.query.hotelId,
-      name: '八里福朋喜來登酒店',
+      name: '福朋喜來登酒店',
       address: '新北市八里區觀海大道8號',
       rating: 5,
       price: 2590,

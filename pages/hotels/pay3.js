@@ -12,33 +12,46 @@ const Pay2 = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>付款成功</h1>
-      <p className={styles.subtitle}>1個工作日內確認</p>
+      <h1 className={styles.title}>我的訂單</h1>
 
       <div className={styles.order}>
         <div className={styles.ordersummary}>
-          <h2 className={styles.h2}>訂單明細</h2>
+          <h2 className={styles.h2}>訂單內容</h2>
           <div className={styles.details}>
-            <p>
-              <strong>訂購人資料</strong>
-            </p>
             <p>
               <strong>訂單編號:</strong>A1245378200
             </p>
             <p>
-              <strong>姓氏:</strong>王
+              <strong>姓氏:</strong> 王
             </p>
             <p>
-              <strong>名字:</strong>大明
+              <strong>名字:</strong> 大明
             </p>
             <p>
-              <strong>國家/地區:</strong> 台灣
+              <strong>飯店:</strong>福朋喜來登酒店
             </p>
             <p>
-              <strong>聯絡電話:</strong> +886 0975378406
+              <strong>房型:</strong>雙人房
             </p>
             <p>
-              <strong>電子信箱:</strong> wong1@gmail.com
+              <strong>價格:</strong>4380
+            </p>
+            <p>
+              <strong>飯店電話：</strong>(02) 2306 - 6777
+            </p>
+            <p>
+              <img
+                src="/imge/16868032835639.jpg"
+                width="300px"
+                alt=""
+                srcset=""
+              />
+              <img
+                src="/imge/desc_9FmJef0MGo138N.jpg"
+                width="300px"
+                alt=""
+                srcset=""
+              />
             </p>
           </div>
           <Button className={styles.button} onClick={handleComplete}>
