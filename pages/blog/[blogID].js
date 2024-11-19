@@ -45,14 +45,6 @@ export default function BlogID(props) {
     return <div>Loading...</div> // 顯示 loading 畫面
   }
 
-
-
-
-
-
-
-
-
   return (
     <>
       <div
@@ -60,7 +52,7 @@ export default function BlogID(props) {
         onClick={() => router.replace('/blog')}
         style={{ cursor: 'pointer' }}
       >
-        歷史古蹟｜赤崁樓｜
+        回到文章列表｜
       </div>
 
       <div className={styles1.all}>
