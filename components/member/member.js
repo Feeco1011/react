@@ -40,8 +40,8 @@ export default function Member() {
       <div className={styles.info}>
         <Link href="/member/edit-profile">
         <div className={router.pathname === '/member/edit-profile' ? styles.active : styles.inactive}>修改個人資訊</div></Link>
-        <Link href="/member/change-password">
-        <div className={router.pathname === '/member/change-password' ? styles.active : styles.inactive}>變更密碼</div></Link>
+        {/* <Link href="/member/change-password">
+        <div className={router.pathname === '/member/change-password' ? styles.active : styles.inactive}>變更密碼</div></Link> */}
         <Link href="/member/hotel-booking">
         <div className={router.pathname === '/member/hotel-booking' ? styles.active : styles.inactive}>我的訂房</div></Link>
         <Link href="/member/restaurant-reservation">

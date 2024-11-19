@@ -65,89 +65,89 @@ export default function Index() {
     fetchSinglePop()
   }, []) // 依賴於 router.query.postId
 
-  useEffect(() => {
-    // 用來獲取景點文章資料
-    const fetchSingleView = async () => {
-      try {
-        const url = 'http://localhost:3005/api/vposts' // 加上引號
-        const response = await fetch(url)
+  // useEffect(() => {
+  //   // 用來獲取景點文章資料
+  //   const fetchSingleView = async () => {
+  //     try {
+  //       const url = 'http://localhost:3005/api/vposts' // 加上引號
+  //       const response = await fetch(url)
 
-        // 確認是否成功返回資料
-        if (!response.ok) {
-          throw new Error('Failed to fetch popular view')
-        }
+  //       // 確認是否成功返回資料
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch popular view')
+  //       }
 
-        const data = await response.json()
-        console.log(data)
+  //       const data = await response.json()
+  //       console.log(data)
 
-        setView(data) // 設置景點文章資料
-      } catch (error) {
-        console.error('Error fetching popular View:', error)
-      }
-    }
+  //       setView(data) // 設置景點文章資料
+  //     } catch (error) {
+  //       console.error('Error fetching popular View:', error)
+  //     }
+  //   }
 
-    fetchSingleView()
-  }, [router.query.postId]) // 依賴於 router.query.postId
+  //   fetchSingleView()
+  // }, [router.query.postId]) // 依賴於 router.query.postId
 
-  useEffect(() => {
-    // 用來獲取分類文章資料
-    const fetchSingleCategory = async () => {
-      try {
-        const url = 'http://localhost:3005/api/catoposts' // 加上引號
-        const response = await fetch(url)
+  // useEffect(() => {
+  //   // 用來獲取分類文章資料
+  //   const fetchSingleCategory = async () => {
+  //     try {
+  //       const url = 'http://localhost:3005/api/catoposts' // 加上引號
+  //       const response = await fetch(url)
 
-        // 確認是否成功返回資料
-        if (!response.ok) {
-          throw new Error('Failed to fetch popular Category')
-        }
+  //       // 確認是否成功返回資料
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch popular Category')
+  //       }
 
-        const data = await response.json()
-        console.log(data)
+  //       const data = await response.json()
+  //       console.log(data)
 
-        setCategory(data) // 設置分類文章資料
-      } catch (error) {
-        console.error('Error fetching popular category:', error)
-      }
-    }
+  //       setCategory(data) // 設置分類文章資料
+  //     } catch (error) {
+  //       console.error('Error fetching popular category:', error)
+  //     }
+  //   }
 
-    fetchSingleCategory()
-  }, [router.query.postId]) // 依賴於 router.query.postId
+  //   fetchSingleCategory()
+  // }, [router.query.postId]) // 依賴於 router.query.postId
 
-  // 根據選擇的分類篩選文章
-  useEffect(() => {
-    if (selectedCategory === '') {
-      setFilteredCategory(category) // 如果沒有選擇分類，顯示所有文章
-    } else {
-      const filtered = category.filter(
-        (catoposts) => catoposts.pt_category === selectedCategory
-      )
-      setFilteredCategory(filtered) // 根據選擇的分類篩選文章
-    }
-  }, [selectedCategory, category]) // 依賴於選擇的分類和所有分類文章資料
+  // // 根據選擇的分類篩選文章
+  // useEffect(() => {
+  //   if (selectedCategory === '') {
+  //     setFilteredCategory(category) // 如果沒有選擇分類，顯示所有文章
+  //   } else {
+  //     const filtered = category.filter(
+  //       (catoposts) => catoposts.pt_category === selectedCategory
+  //     )
+  //     setFilteredCategory(filtered) // 根據選擇的分類篩選文章
+  //   }
+  // }, [selectedCategory, category]) // 依賴於選擇的分類和所有分類文章資料
 
-  useEffect(() => {
-    // 用來獲取城市文章資料
-    const fetchSingleCity = async () => {
-      try {
-        const url = 'http://localhost:3005/api/cityposts' // 加上引號
-        const response = await fetch(url)
+  // useEffect(() => {
+  //   // 用來獲取城市文章資料
+  //   const fetchSingleCity = async () => {
+  //     try {
+  //       const url = 'http://localhost:3005/api/cityposts' // 加上引號
+  //       const response = await fetch(url)
 
-        // 確認是否成功返回資料
-        if (!response.ok) {
-          throw new Error('Failed to fetch popular city')
-        }
+  //       // 確認是否成功返回資料
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch popular city')
+  //       }
 
-        const data = await response.json()
-        console.log(data)
+  //       const data = await response.json()
+  //       console.log(data)
 
-        setCity(data) // 設置城市文章資料
-      } catch (error) {
-        console.error('Error fetching popular posts:', error)
-      }
-    }
+  //       setCity(data) // 設置城市文章資料
+  //     } catch (error) {
+  //       console.error('Error fetching popular posts:', error)
+  //     }
+  //   }
 
-    fetchSingleCity()
-  }, [router.query.postId]) // 依賴於 router.query.postId
+  //   fetchSingleCity()
+  // }, [router.query.postId]) // 依賴於 router.query.postId
 
   return (
     <>
@@ -170,21 +170,21 @@ export default function Index() {
         </div>
 
         <br />
-        <div className={styles.viewwell}>
+        {/* <div className={styles.viewwell}>
           <div className={styles.word}>
             <div className={styles.title}>景點</div>
-          </div>
-          <br />
-          <div className={styles.had}>
-            {view.map((v) => (
-              <Link href={`/blog/${v.id}`} key={v.id}>
-                {' '}
-                {/* 修正 href 字串模板 */}
-                <ForumCard view={v} />
-              </Link>
-            ))}
-          </div>
+          </div> */}
+        <br />
+        <div className={styles.had}>
+          {view.map((v) => (
+            <Link href={`/blog/${v.id}`} key={v.id}>
+              {' '}
+              {/* 修正 href 字串模板 */}
+              <ForumCard view={v} />
+            </Link>
+          ))}
         </div>
+        {/* </div>
 
         <br />
         <div className={styles.category}>
@@ -203,47 +203,43 @@ export default function Index() {
             <option value="舒適休閒">舒適休閒</option>
             <option value="自然環境">自然環境</option>
             <option value="人文藝術">人文藝術</option>
-          </select>
+          </select> */}
 
-          <div className={styles.had}>
-            {category.map((v) => (
-              <Link href={`/blog/${v.id}`} key={v.id}>
-                {' '}
-                {/* 修正 href 字串模板 */}
-                <ForumCard category={v} />
-              </Link>
-            ))}
-          </div>
+        <div className={styles.had}>
+          {category.map((v) => (
+            <Link href={`/blog/${v.id}`} key={v.id}>
+              {' '}
+              {/* 修正 href 字串模板 */}
+              <ForumCard category={v} />
+            </Link>
+          ))}
         </div>
+      </div>
 
-        <br />
-        <div className={styles.cityy}>
-          <div className={styles.word}>
-            <div className={styles.title1}>城市</div>
-          </div>
-          <br />
-          <select>
+      <br />
+      {/* <div className={styles.cityy}> */}
+      {/* <div className={styles.word}> */}
+      {/* <div className={styles.title1}>城市</div> */}
+      {/* </div> */}
+      <br />
+      {/* <select>
             <option>台北</option>
             <option>新北</option>
             <option>基隆</option>
             {/* ...其他城市選項 */}
-          </select>
+      {/* </select>  */}
 
-          <div className={styles.had}>
-            {city.map((item) => (
-              <Link href={`/blog/${item.id}`} key={item.id}>
-                {' '}
-                {/* 修正 href 字串模板 */}
-                <ForumCard data={item} />
-              </Link>
-            ))}
-          </div>
-        </div>
+      <div className={styles.had}>
+        {city.map((item) => (
+          <Link href={`/blog/${item.id}`} key={item.id}>
+            {' '}
+            {/* 修正 href 字串模板 */}
+            <ForumCard data={item} />
+          </Link>
+        ))}
+        {/* </div> */}
+        {/* </div> */}
       </div>
     </>
   )
 }
-
-
-
-
