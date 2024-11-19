@@ -12,10 +12,10 @@ export default function Index() {
     <div className={style.ifo}>
       <div>
         <img src="/logoTest/date_icon.jpg" alt="" />
-        2024年10月14日
+        2024年12月21日
       </div>
       <div>
-        <img src="/logoTest/time_icon.jpg" alt="" /> 下午 7:00
+        <img src="/logoTest/time_icon.jpg" alt="" /> 下午 6:30
       </div>
       <div>
         <img src="/logoTest/num_icon.jpg" alt="" /> 2位
