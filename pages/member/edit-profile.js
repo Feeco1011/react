@@ -158,18 +158,6 @@ export default function Profile() {
               onChange={handleFieldChange}
             />
           </div>
-
-          {/* <div className={styles.inputGroup2}>
-            <label className={styles.div6} htmlFor="email">電子信箱</label>
-            <input
-              type="email"
-              className={styles.input}
-              placeholder="請輸入電子信箱"
-              id="email"
-              value={auth.userData.email}
-              disabled
-            />
-          </div> */}
         </div>
 
         <div className={styles.div16}>

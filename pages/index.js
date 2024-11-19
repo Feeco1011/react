@@ -21,25 +21,25 @@ export default function Home() {
       </div>
       <div className={styles.icons}>
         <div className={styles.div5}>
-          <a href="index123">
+          <a href="./hotels/">
             <img className={styles.dish1Icon} alt="" src="/house.png" />
             <b className={styles.b5}>住宿</b>
           </a>
         </div>
         <div className={styles.div5}>
-          <a href="index123">
+          <a href="./restaurant/">
             <img className={styles.dish1Icon} alt="" src="/dish.png" />
             <b className={styles.b5}>餐廳</b>
           </a>
         </div>
         <div className={styles.div5}>
-          <a href="index123">
+          <a href="./blog/">
             <img className={styles.dish1Icon} alt="" src="/travel.png" />
             <b className={styles.b5}>景點</b>
           </a>
         </div>
         <div className={styles.div5}>
-          <a href="index123">
+          <a href="./blog/">
             <img className={styles.dish1Icon} alt="" src="/speech.png" />
             <b className={styles.b5}>論壇</b>
           </a>
