@@ -9,6 +9,7 @@ export default function BlogID(props) {
   const [isLiked, setIsLiked] = useState(false) // 初始化讚狀態
   const [likeCount, setLikeCount] = useState(0) // 初始化讚數
   const [messages, setMessages] = useState([]) // 留言數據
+  
   const [id, setId] = useState([])
   const router = useRouter()
 
@@ -51,6 +52,34 @@ export default function BlogID(props) {
   if (!blogData) {
     return <div>Loading...</div> // 顯示 loading 畫面
   }
+
+
+
+  // 處理新增評論
+  const handleMessage = async (message) => {
+    try {
+      const url = `http:localhost:3005/api/posts/${id}`;
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: getAuthHeader ? await getAuthHeader() : {},
+        body: JSON.stringify({
+          content: comment,
+        }),
+      });
+      if (!response.ok) throw new Error('新增回覆失敗');
+      const data = await response.json();
+      setComments((prev) => [data, ...prev]);
+      toast.success('回覆成功！'); // 顯示成功提示
+    } catch (error) {
+      console.error('新增回覆錯誤:', error);
+      toast.error('新增回覆失敗'); // 顯示錯誤提示
+    }
+  };
+
+
+
+
+
 
   return (
     <>
@@ -113,7 +142,7 @@ export default function BlogID(props) {
       <div className={styles.msgContainer}>
         <div className={styles.photom}>
           <img
-            src="https://i0.wp.com/www.flycan.com/article/wp-content/uploads/2012/08/012.jpg?fit=800%2C500"
+            src="/user_pic.png"
             alt=""
             className={styles.msgPhoto}
           />

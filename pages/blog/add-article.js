@@ -128,7 +128,7 @@ const ArticleForm = () => {
         formDataToSend.append('image', file);
       }
 
-      const response = await fetch('http://localhost:3005/api/articles', {
+      const response = await fetch('http://localhost:3005/api/posts', {
         method: 'POST',
         body: formDataToSend,
       });
