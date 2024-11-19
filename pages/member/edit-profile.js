@@ -1,6 +1,5 @@
 import styles from '@/styles/profile.module.css'
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
 import Member from '@/components/member/member'
 import {
   updateProfile,
@@ -13,10 +12,10 @@ import PreviewUploadImage from '@/components/user-test/preview-upload-image'
 import { avatarBaseUrl } from '@/configs'
 // 定義要在此頁呈現/編輯的會員資料初始物件
 const initUserProfile = {
-  name: '',
-  sex: '',
-  phone: '',
-  avatar: '',
+  name: '王小明',
+  sex: '1',
+  phone: '0911123456',
+  // avatar: '',
 }
 
 export default function Profile() {
@@ -24,6 +23,7 @@ export default function Profile() {
   const [userProfile, setUserProfile] = useState(initUserProfile)
   const [hasProfile, setHasProfile] = useState(false)
   const [selectedFile, setSelectedFile] = useState(null)
+  
 
   // 獲取會員資料
   const getUserData = async (id) => {
@@ -41,7 +41,7 @@ export default function Profile() {
       setUserProfile(dbUserProfile)
       toast.success('會員資料載入成功')
     } else {
-      toast.error(`會員資料載入失敗`)
+      toast.error(``)
     }
   }
 
@@ -90,31 +90,6 @@ export default function Profile() {
 
   return (
     <>
-      {/* <h1>會員資料修改(一般)</h1>
-      <hr />
-      <p>
-        規則: username與email不能修改(這與註冊機制或網站會員的安全機制的有關)
-      </p>
-      <p>
-        注意: 密碼不在這裡修改，因機制不一樣，在
-        <Link href="/test/user/profile-password">會員資料修改(密碼)</Link>
-      </p>
-      <hr /> */}
-
-      {/* {hasProfile ? (
-        <PreviewUploadImage
-          avatarImg={userProfile.avatar}
-          avatarBaseUrl={avatarBaseUrl}
-          setSelectedFile={setSelectedFile}
-          selectedFile={selectedFile}
-        />
-      ) : (
-        <div>
-          <img src="/blank.webp" alt="" width="200" height="200" />
-        </div>
-      )} */}
-
-
       <div>
       <Member />
       <div className={styles.card1}>
@@ -183,18 +158,6 @@ export default function Profile() {
               onChange={handleFieldChange}
             />
           </div>
-
-          <div className={styles.inputGroup2}>
-            <label className={styles.div6} htmlFor="email">電子信箱</label>
-            <input
-              type="email"
-              className={styles.input}
-              placeholder="請輸入電子信箱"
-              id="email"
-              value={auth.userData.email}
-              disabled
-            />
-          </div>
         </div>
 
         <div className={styles.div16}>
@@ -206,6 +169,7 @@ export default function Profile() {
         </div>
       </div>
       </div>
+      <Toaster />
     </>
   )
 }

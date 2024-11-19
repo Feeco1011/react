@@ -1,33 +1,37 @@
-import { useState } from 'react'
+import styles from '@/styles/login.module.css'
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useAuth } from '@/hooks/use-auth'
 
-export default function RegisterForm() {
-  // 從勾子的context得到註冊函式
+const Register = () => {
+    // 從勾子的context得到註冊函式
   const { register } = useAuth()
-
+  
   // 狀態為物件，屬性對應到表單的欄位名稱
   const [user, setUser] = useState({
     name: '',
+    sex: false,
+    mobile: '',
     email: '',
-    username: '',
     password: '',
     confirmPassword: '',
-    agree: false, // checkbox 同意會員註冊條款
   })
 
   // 錯誤訊息狀態
   const [errors, setErrors] = useState({
     name: '',
+    sex: '',
+    mobile: '',
     email: '',
-    username: '',
     password: '',
-    confirmPassword: '',
-    agree: '', // 錯誤訊息用字串
+    confirmPassword: '', // 錯誤訊息用字串
   })
-
-  // checkbox 呈現密碼用
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  
+  const [newPass, setNewPass] = useState('')
+  const [confirmPass, setConfirmPass] = useState('')
+  // 呈現密碼用
+  const [showNewPass, setShowNewPass] = useState(false)
+  const [showConfirmPass, setShowConfirmPass] = useState(false)
 
   // 多欄位共用事件函式
   const handleFieldChange = (e) => {
@@ -46,208 +50,255 @@ export default function RegisterForm() {
     // 1. 建立一個全新的錯誤訊息用物件
     const newErrors = {
       name: '',
+      sex: '',
+      mobile: '',
       email: '',
-      username: '',
       password: '',
       confirmPassword: '',
-      agree: '',
     }
 
-    // 2.開始作各欄位的表單檢查，如果有錯誤訊息就加到newErrors
-    if (!user.name) {
-      newErrors.name = '姓名為必填'
-    }
-
-    if (!user.email) {
-      newErrors.email = 'Email為必填'
-    }
-
-    if (!user.username) {
-      newErrors.username = '帳號為必填'
-    }
-
-    if (!user.agree) {
-      newErrors.agree = '請先同意會員註冊條款'
-    }
-
-    if (user.password !== user.confirmPassword) {
-      newErrors.password = '密碼與確認密碼需要相同'
-      newErrors.confirmPassword = '密碼與確認密碼需要相同'
-    }
-
-    if (user.password.length < 6) {
-      newErrors.password = '密碼長度不能小於6'
-    }
-
-    if (!user.password) {
-      newErrors.password = '密碼為必填'
-    }
-
-    if (!user.confirmPassword) {
-      newErrors.confirmPassword = '確認密碼為必填'
-    }
-
-    // 如果newErrors中的物件值中其中有一個非空白字串，代表有錯誤發生
-    const hasErrors = Object.values(newErrors).some((v) => v)
-
-    // 表單檢查--END---
-    return { newErrors, hasErrors }
+   // 2.開始作各欄位的表單檢查，如果有錯誤訊息就加到newErrors
+   if (!user.name) {
+    newErrors.name = '姓名為必填'
   }
 
-  const handleSubmit = async (e) => {
-    // 固定的ajax/fetch的語法，會在表單submit觸發的第一行阻擋表單的預設行為
-    e.preventDefault()
-
-    // 檢查錯誤
-    const { newErrors, hasErrors } = checkError(user)
-    // 呈現錯誤訊息
-    setErrors(newErrors)
-    // 有錯誤，不送到伺服器，跳出此函式
-    if (hasErrors) {
-      return // 跳出此函式，在下面的程式碼不會再執行
-    }
-
-    // 送到伺服器
-    // 刪除不必要的欄位(不一定需要)
-    const { confirmPassword, agree, ...newUser } = user
-    // 呼叫register(useAuth勾子裡)
-    await register(newUser)
+  if (!user.sex) {
+    newErrors.sex = '性別為必填'
   }
+
+  if (!user.mobile) {
+    newErrors.mobile = '電話號碼為必填'
+  }else if (!user.mobile.startsWith('09')) {
+    newErrors.mobile = '電話號碼必須以09開頭'
+  } else if (user.mobile.length > 10) {
+    newErrors.mobile = '電話號碼不能大於10碼'
+  }
+
+  if (!user.email) {
+    newErrors.email = '電子信箱為必填'
+  }
+
+  if (user.password !== user.confirmPassword) {
+    newErrors.password = '密碼與確認密碼需要相同'
+    newErrors.confirmPassword = '密碼與確認密碼需要相同'
+  }
+
+  if (user.password.length < 6) {
+    newErrors.password = '密碼長度不能小於6'
+  }
+
+  if (!user.password) {
+    newErrors.password = '密碼為必填'
+  }
+
+  if (!user.confirmPassword) {
+    newErrors.confirmPassword = '確認密碼為必填'
+  }
+
+// 如果newErrors中的物件值中其中有一個非空白字串，代表有錯誤發生
+const hasErrors = Object.values(newErrors).some((v) => v)
+
+// 表單檢查--END---
+return { newErrors, hasErrors }
+}
+
+const handleSubmit = async (e) => {
+  // 固定的ajax/fetch的語法，會在表單submit觸發的第一行阻擋表單的預設行為
+  e.preventDefault()
+
+  // 檢查錯誤
+  const { newErrors, hasErrors } = checkError(user)
+  // 呈現錯誤訊息
+  setErrors(newErrors)
+  // 有錯誤，不送到伺服器，跳出此函式
+  if (hasErrors) {
+    return // 跳出此函式，在下面的程式碼不會再執行
+  }
+
+  // 送到伺服器
+  // 刪除不必要的欄位(不一定需要)
+  const { confirmPassword, ...newUser } = user
+  // 呼叫register(useAuth勾子裡)
+  await register(newUser)
+}
+
 
   return (
-    <>
-      <h1>註冊表單</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          姓名:{' '}
-          <input
-            type="text"
-            name="name"
-            value={user.name}
-            onChange={handleFieldChange}
-          />
-        </label>
-        <br />
-        <span className="error">{errors.name}</span>
-        <br />
-        <label>
-          Email:{' '}
-          <input
-            type="text"
-            name="email"
-            value={user.email}
-            onChange={handleFieldChange}
-          />
-        </label>
-        <br />
-        <span className="error">{errors.email}</span>
-        <br />
-        <label>
-          帳號:{' '}
-          <input
-            type="text"
-            name="username"
-            value={user.username}
-            onChange={handleFieldChange}
-          />
-        </label>
-        <br />
-        <span className="error">{errors.username}</span>
-        <br />
-        <label>
-          密碼:{' '}
-          <input
-            type={showPassword ? 'text' : 'password'}
-            name="password"
-            value={user.password}
-            onChange={handleFieldChange}
-          />
-        </label>
-        <input
-          type="checkbox"
-          checked={showPassword}
-          onChange={(e) => {
-            setShowPassword(!showPassword)
-          }}
-        />{' '}
-        顯示密碼
-        <br />
-        <span className="error">{errors.password}</span>
-        <br />
-        <label>
-          確認密碼:{' '}
-          <input
-            type={showConfirmPassword ? 'text' : 'password'}
-            name="confirmPassword"
-            value={user.confirmPassword}
-            onChange={handleFieldChange}
-          />
-        </label>
-        <input
-          type="checkbox"
-          checked={showConfirmPassword}
-          onChange={(e) => {
-            setShowConfirmPassword(!showConfirmPassword)
-          }}
-        />{' '}
-        顯示密碼
-        <br />
-        <span className="error">{errors.confirmPassword}</span>
-        <br />
-        <label>
-          <input
-            type="checkbox"
-            name="agree"
-            checked={user.agree}
-            onChange={handleFieldChange}
-          />{' '}
-          我同意網站會員註冊條款
-        </label>
-        <br />
-        <span className="error">{errors.agree}</span>
-        <br />
-        {/* 在表單(form)中加入button，記得寫type是哪一種，預設不寫是submit */}
-        <button type="submit">註冊</button>
-        <button
-          type="button"
-          onClick={() => {
-            setUser({
-              name: '',
-              email: '',
-              username: '',
-              password: '',
-              confirmPassword: '',
-              agree: false, // checkbox 同意會員註冊條款
-            })
-          }}
-        >
-          重置
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            setUser({
-              name: 'test',
-              email: 'test@gg.com',
-              username: 'test',
-              password: '111111',
-              confirmPassword: '111111',
-              agree: true, // checkbox 同意會員註冊條款
-            })
-          }}
-        >
-          一鍵輸入
-        </button>
-      </form>
-      <style jsx>
-        {`
-          .error {
-            color: red;
-            font-size: 12px;
-            height: 16px;
-          }
-        `}
-      </style>
-    </>
+    <form onSubmit={handleSubmit}>
+    <div className={styles.profile}>
+      <div className={styles.signupcard}>
+        <b className={styles.b}>會員註冊</b>
+        {/* <div className={styles.info} /> */}
+        <div className={styles.div3}>
+          <button type="submit" className={styles.registerchild}>
+            會員註冊
+          </button>
+        </div>
+        <div className={styles.registergroup1}>
+          <b className={styles.b2}>已有會員帳號?</b>
+          <div className={styles.registergroup2}>
+            <Link href="login" className={styles.b3}>
+              回會員登入
+            </Link>
+        
+          </div>
+        </div>
+        <div className={styles.register}>
+          <div className={styles.inputGroup}>
+            <label className={styles.div600} htmlFor="name">
+              姓名
+            </label>
+            <input
+              type="text"
+              name="name"
+              className={styles.input}
+              onChange={handleFieldChange}
+              value={user.name}
+              placeholder="請輸入姓名"
+              id="name"
+            />
+            <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'50px',left:'130px',   position:'absolute', } }>{errors.name}</span>
+           
+          
+            <div className={styles.item} />
+          </div>
+          <div className={styles.sexGroup}>
+            <div className={styles.div8}>
+              <p className={styles.p}>性別</p>
+            </div>
+            <div className={styles.sex}>
+              <label class="radio-container">
+                <input type="radio" name="sex" value="male" onChange={handleFieldChange}
+              />
+                男性
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="sex" value="female" onChange={handleFieldChange} />
+                女性
+              </label>
+              <label>
+                <input type="radio" name="sex" value="other" onChange={handleFieldChange} />
+                其他
+              </label>
+            </div>
+            <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'130px',left:'130px',   position:'absolute' } }>{errors.sex}</span>
+          </div>
+         
+
+          <div className={styles.div12}>
+            <label className={styles.div13} htmlFor="mobile">電話號碼</label>
+            <input
+              type="tel"
+               name="mobile"
+              className={styles.input}
+              placeholder="請輸入電話號碼"
+              id="mobile"
+              value={user.mobile}
+              onChange={handleFieldChange}
+            />
+             <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'55px',left:'130px',   position:'absolute', } }>{errors.mobile}</span>
+          </div>
+          
+          <div className={styles.div14}>
+            <div className={styles.div15}>
+              <div className={styles.div16}>
+                <div className={styles.profileInfo}>
+                  <div className={styles.inputGroup2}>
+                    <label className={styles.div13} htmlFor="email">電子信箱{' '}</label>
+                    <input
+                      type="email"
+                       name="email"
+                      className={styles.input}
+                      onChange={handleFieldChange}
+                      placeholder="請輸入電子信箱"
+                      id="email"
+                      value={user.email}
+
+                    />  
+                   
+                  </div>
+                  <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'50px',left:'130px',   position:'absolute', } }>{errors.email}</span>
+                </div>
+               
+              </div>
+             
+              <div className={styles.div18}>
+                <label className={styles.div13} htmlFor="password">密碼{' '}</label>
+                <input
+                  type={showNewPass ? 'text' : 'password'}
+                    name="password"
+                  value={user.password.newPass}
+                  className={styles.input}
+                  placeholder="請輸入密碼"
+                  id="password"
+                  
+                  onChange={(e) => {
+                    handleFieldChange(e);
+                    setNewPass(e.target.value);
+                  }}
+                />
+              </div>
+
+              <button
+                className={styles.showpass}
+                onClick={() => {
+                  setShowNewPass(!showNewPass)
+                }}
+              >
+                {showNewPass ? '顯示' : '不顯示'}
+              </button>  
+               </div>
+               <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'180px',left:'185px',   position:'absolute', } }>{errors.password}</span>
+              
+              
+               
+
+            <div className={styles.div20}>
+              <label className={styles.div13} htmlFor="confirmPassword">確認密碼{' '}</label>
+              <input
+                type={showConfirmPass ? 'text' : 'password'}
+                value={user.confirmPassword.confirmPass}
+                className={styles.input} 
+                placeholder="再次確認密碼"
+                id="confirmPassword"
+                name="confirmPassword"
+
+              
+                onChange={(e) => {
+              handleFieldChange(e);
+              setConfirmPass(e.target.value)
+                }}
+              />
+            </div>
+            <button
+              className={styles.registerconfirmshowpass}
+              onClick={() => {
+                setShowConfirmPass(!showConfirmPass)
+              }}
+            >
+              {showConfirmPass ? '顯示' : '不顯示'}
+            </button> 
+          </div>
+         
+ <span className="error" style={{color: 'red',
+  fontSize: '12px',
+  height: '16px',top:'560px',left:'190px',   position:'absolute' } }>{errors.confirmPassword}</span>
+        </div>
+      </div>
+    </div>
+    </form>
+      
   )
 }
+
+export default Register

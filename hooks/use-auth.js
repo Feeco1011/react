@@ -122,12 +122,14 @@ export function AuthProvider({ children }) {
 
     const resData = await res.json()
 
-    if (resData.status === 'success') {
+    if (resData.status === 'success')
+      {
       notify('success', '更新完成', '已更新完成')
     } else {
       notify('error', '失敗', resData.message)
     }
   }
+  
 
   // 模擬會員登入
   const login = async (email, password) => {
@@ -161,14 +163,16 @@ export function AuthProvider({ children }) {
         userData: member,
       })
 
-      // 歡迎訊息與詢問是否要到個人資料頁
+      
+
+      //歡迎訊息與詢問是否要到個人資料頁
       if (confirm('你好，是否要前往修改個人資訊頁?')) {
         router.push('/member/edit-profile')
       }
     } else {
       alert('電子信箱或密碼錯誤')
-    }
   }
+ }
 
   // 模擬會員登出
   const logout = async () => {
@@ -236,7 +240,7 @@ export function AuthProvider({ children }) {
           setTimeout(() => {
             alert('無進入權限，請先登入!')
             router.push(loginRoute)
-          }, 1500000)
+          }, 150000)
         }
       }
     } catch (e) {

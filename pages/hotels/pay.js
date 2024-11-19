@@ -123,7 +123,6 @@ const Pay = () => {
         <h2>訂單摘要</h2>
         <p>支付金額:NT$4380</p>
         <p>訂單總金額:NT$4380</p>
-        <p>訂單完成後回饋:$22</p>
         <Button className={styles.button} onClick={handleComplete}>
           繼續
         </Button>

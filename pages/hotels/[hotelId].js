@@ -48,16 +48,16 @@ export default function HotelDetail() {
 
     setHotelData({
       id: router.query.hotelId,
-      name: '八里福朋喜來登酒店',
+      name: '福朋喜來登酒店',
       address: '新北市八里區觀海大道8號',
       rating: 5,
       price: 2590,
       doubleRoomPrice: 4380,
       images: [
-        'https://www.evalue.com.tw/data/10000/upload/files/16868032835639.jpg',
-        'https://www.upmedia.mg/upload/content/20230308/Ee230308184900683868.jpg',
-        'https://media-cdn.tripadvisor.com/media/photo-s/27/18/13/a5/caption.jpg',
-        'https://image-store.asiayo.com/bnb/30241/750xauto/desc_9FmJef0MGo138N.jpg',
+        '/imge/16868032835639.jpg',
+        '/imge/Ee230308184900683868.jpg',
+        '/imge/caption.jpg',
+        '/imge/desc_9FmJef0MGo138N.jpg',
       ],
       features: [
         { icon: '/hotel-svg/fried-egg.png', label: '早餐' },
@@ -246,21 +246,21 @@ export default function HotelDetail() {
         退房時間：11:00 以前
         <img
           style={{ maxWidth: '100%' }}
-          src="https://e1e3045b0a.cbaul-cdnwnd.com/2f3862cef2bce2db6c56893e181a7287/200000000-f0e8ef0e92/DJI_0498.jpeg?ph=e1e3045b0a"
+          src="/imge/喜來登大飯店外觀.jpeg"
           alt="喜來登大飯店外觀"
           srcset=""
         />
         <p>豪華客房雙人房｜一大床</p>
         <img
           style={{ maxWidth: '100%' }}
-          src="https://hotel.fhgh.com.tw/upload/room_b/ALL_room_21E21_Utt5O7y8RP.jpg"
+          src="/imge/豪華客房雙人房｜一大床.jpg"
           alt="豪華客房雙人房｜一大床"
           srcset=""
         />
         <p>豪華客房雙人房｜二小床</p>
         <img
           style={{ maxWidth: '100%' }}
-          src="https://hotel.fhgh.com.tw/upload/room_b/ALL_room_21E21_AR6V26BVoy.jpg"
+          src="/imge/豪華客房雙人房｜二小床.jpg"
           alt="豪華客房雙人房｜二小床"
           srcset=""
         />

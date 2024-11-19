@@ -5,12 +5,14 @@
     justify-content: center;
   } */
 
+<<<<<<< HEAD
   .header,
   .container,
   .largeContainer,
   .rectangleContainer {
     width: 1440px; /* 設定寬度 */
     margin: 0 10%;
+    margin-left: 230px;
     display: flex;
     justify-content: center;
   }
@@ -22,7 +24,7 @@
   .largeContainer,
   .rectangleContainer {
     padding: 0%;
-    margin-top: 5%;
+    margin-top: 3%;
   }
   .header {
     position: relative; /* 使陰影相對於 header 元素 */
@@ -38,7 +40,8 @@
   }
   
   .rectangleContainer {
-    gap: 10px;
+    gap: 20px;
+    margin-bottom: 30px;
   }
   
   .rectangle {
@@ -182,26 +185,229 @@
   }
   
   .rectangle1 {
-    background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形1的背景图片URL */
+    background-image: url(/imge/giLong.jpg); /* 替换为长方形1的背景图片URL */
   }
   
   .rectangle2 {
-    background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形2的背景图片URL */
+    background-image: url(/imge/gowShong.jpg); /* 替换为长方形2的背景图片URL */
   }
   
   .rectangle3 {
-    background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形3的背景图片URL */
+    background-image: url(/imge/huaLian.jpg); /* 替换为长方形3的背景图片URL */
   }
   
   .rectangle4 {
-    background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形4的背景图片URL */
+    background-image: url(/imge/joFen.jpg); /* 替换为长方形4的背景图片URL */
   }
   
   .rectangle5 {
-    background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形5的背景图片URL */
+    background-image: url(/imge/pingDong.jpg); /* 替换为长方形5的背景图片URL */
   }
   
   .rectangle6 {
-    background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形6的背景图片URL */
+    background-image: url(/imge/taiDong.jpg); /* 替换为长方形6的背景图片URL */
   }
   
+=======
+.header,
+.container,
+.largeContainer,
+.rectangleContainer {
+  width: 1440px; /* 設定寬度 */
+  margin: 0 10%;
+  margin-left: 230px;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  justify-content: space-between;
+}
+.container,
+.largeContainer,
+.rectangleContainer {
+  padding: 0%;
+  margin-top: 3%;
+}
+.header {
+  position: relative; /* 使陰影相對於 header 元素 */
+  text-align: center; /* 可選，根據需要設置對齊方式 */
+  border-bottom: 2px solid #000;
+  align-items: center; /* 垂直居中對齊 */
+  padding: 10px 20px; /* 添加內邊距 */
+}
+.container,
+.largeContainer {
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.rectangleContainer {
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.rectangle {
+  position: relative;
+  width: 177.23px;
+  height: 360px;
+  background-size: cover; /* 使背景图覆盖整个长方形 */
+  background-position: center; /* 背景图居中 */
+  border-radius: 5px; /* 可选：添加圆角 */
+  color: rgb(245, 242, 242); /* 字体颜色为白色 */
+  padding: 10px; /* 内边距 */
+  box-sizing: border-box; /* 使内边距包含在宽高计算中 */
+}
+.rectangleText {
+  position: absolute; /* 设置绝对定位 */
+  top: 10px; /* 距离顶部10像素 */
+  left: 10px; /* 距离左侧10像素 */
+  font-size: 48px; /* 字体大小 */
+}
+
+.logo img {
+  height: 50px; /* 設置 logo 高度 */
+}
+.headerLinks {
+  display: flex; /* 使用 Flexbox 來排列連結 */
+}
+
+.headerLinks .link {
+  margin-left: 20px; /* 連結之間的間距 */
+  font-size: 24px; /* 文字大小 */
+  font-weight: bold; /* 粗體 */
+  color: black; /* 文字顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+}
+
+.imageSection {
+  position: relative; /* 使子元素的絕對定位相對於這個元素 */
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; /* 絕對定位 */
+  top: 10px; /* 上邊距 */
+  left: 10px; /* 左邊距 */
+  color: white; /* 文字顏色 */
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px; /* 圖標和文字之間的間距 */
+}
+
+.text {
+  font-size: 18px; /* 字體大小 */
+}
+
+.rightIconOverlay {
+  position: absolute; /* 絕對定位 */
+  top: 10px; /* 上邊距 */
+  right: 10px; /* 右邊距 */
+}
+
+.rightIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.textSection {
+  padding: 10%;
+  text-align: center;
+}
+
+.cardContainer {
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContainerLarge {
+  width: 600px;
+  height: 600px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageSection {
+  position: relative; /* 使子元素的絕對定位相對於這個元素 */
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; /* 絕對定位 */
+  top: 10px; /* 上邊距 */
+  left: 10px; /* 左邊距 */
+  color: white; /* 文字顏色 */
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px; /* 圖標和文字之間的間距 */
+}
+
+.rightIconOverlay {
+  position: absolute; /* 絕對定位 */
+  top: 10px; /* 上邊距 */
+  right: 10px; /* 右邊距 */
+}
+
+.rightIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.rectangle1 {
+  background-image: url(/imge/giLong.jpg); /* 替换为长方形1的背景图片URL */
+}
+
+.rectangle2 {
+  background-image: url(/imge/gowShong.jpg); /* 替换为长方形2的背景图片URL */
+}
+
+.rectangle3 {
+  background-image: url(/imge/huaLian.jpg); /* 替换为长方形3的背景图片URL */
+}
+
+.rectangle4 {
+  background-image: url(/imge/joFen.jpg); /* 替换为长方形4的背景图片URL */
+}
+
+.rectangle5 {
+  background-image: url(/imge/pingDong.jpg); /* 替换为长方形5的背景图片URL */
+}
+
+.rectangle6 {
+  background-image: url(/imge/taiDong.jpg); /* 替换为长方形6的背景图片URL */
+}
+>>>>>>> 23b3d77fcedd457a09971a5a91bf898f63364a95
