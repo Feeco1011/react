@@ -57,6 +57,7 @@
   color: rgb(245, 242, 242); /* 字体颜色为白色 */
   padding: 10px; /* 内边距 */
   box-sizing: border-box; /* 使内边距包含在宽高计算中 */
+  cursor: pointer;
 }
 .rectangleText {
   position: absolute; /* 设置绝对定位 */
@@ -136,6 +137,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .cardContainerLarge {
@@ -147,6 +149,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .imageSection {
@@ -188,25 +191,25 @@
 }
 
 .rectangle1 {
-  background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形1的背景图片URL */
+  background-image: url(/restaurantPicture/one/瑪黑餐酒8.jpg); /* 替换为长方形1的背景图片URL */
 }
 
 .rectangle2 {
-  background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形2的背景图片URL */
+  background-image: url(/restaurantPicture/one/樂葵鐵板燒3.jpg); /* 替换为长方形2的背景图片URL */
 }
 
 .rectangle3 {
-  background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形3的背景图片URL */
+  background-image: url(/restaurantPicture/one/橘色1.jpg); /* 替换为长方形3的背景图片URL */
 }
 
 .rectangle4 {
-  background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形4的背景图片URL */
+  background-image: url(/restaurantPicture/one/瞞著4.jpg); /* 替换为长方形4的背景图片URL */
 }
 
 .rectangle5 {
-  background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形5的背景图片URL */
+  background-image: url(/restaurantPicture/one/鮨岡心3.jpg); /* 替换为长方形5的背景图片URL */
 }
 
 .rectangle6 {
-  background-image: url(/restaurantPicture/one/心潮1.jpg); /* 替换为长方形6的背景图片URL */
+  background-image: url(/restaurantPicture/one/ACME8.jpg); /* 替换为长方形6的背景图片URL */
 }

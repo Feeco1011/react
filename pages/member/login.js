@@ -34,7 +34,7 @@ const Login = () => {
         <div className={styles.logingrorp1}>
           <b className={styles.memberyet}>尚未註冊會員?</b>
           <div className={styles.logingrorp2}>
-            <Link href="registerfinal" className={styles.tosignup}>
+            <Link href="register" className={styles.tosignup}>
               會員註冊
             </Link>
             {/* <b className={styles.tosignup}>會員註冊</b> */}

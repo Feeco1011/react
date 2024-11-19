@@ -23,22 +23,22 @@ const Pay2 = () => {
               <strong>訂購人資料</strong>
             </p>
             <p>
-              <strong>訂單編號:</strong> O2659221386341425152
+              <strong>訂單編號:</strong>A1245378200
             </p>
             <p>
-              <strong>姓氏:</strong> ken
+              <strong>姓氏:</strong>王
             </p>
             <p>
-              <strong>名字:</strong> shiberr
+              <strong>名字:</strong>大明
             </p>
             <p>
               <strong>國家/地區:</strong> 台灣
             </p>
             <p>
-              <strong>聯絡電話:</strong> +886 0912345678
+              <strong>聯絡電話:</strong> +886 0975378406
             </p>
             <p>
-              <strong>電子信箱:</strong> test123@gmail.com
+              <strong>電子信箱:</strong> wong1@gmail.com
             </p>
           </div>
           <Button className={styles.button} onClick={handleComplete}>

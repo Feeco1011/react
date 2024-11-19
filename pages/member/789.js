@@ -146,17 +146,17 @@ useEffect(() => {
             </div>
             <div className={styles.sex}>
            <label>
-                <input type="radio" name="sex" value="male"  checked={user.sex === 'male'}
+                <input type="radio" name="sex" value="1"  checked={user.sex === '1'}
               onChange={handleFieldChange}/>
                 男性
               </label>
               <label>
-                <input type="radio" name="sex" value="female" checked={user.sex === 'female'}
+                <input type="radio" name="sex" value="2" checked={user.sex === '2'}
               onChange={handleFieldChange} />
                 女性
               </label>
               <label>
-                <input type="radio" name="sex" value="other" checked={user.sex === 'other'}
+                <input type="radio" name="sex" value="3" checked={user.sex === '3'}
               onChange={handleFieldChange} />
                 其他
               </label>
