@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '@/styles/reservation2.module.css'
-
+import Link from 'next/link'
 export default function Index() {
   return (
     <>
@@ -13,11 +13,11 @@ export default function Index() {
     <div className={style.ifo}>
       <div>
         <img src="/logoTest/date_icon.jpg" alt="" />
-        2024年10月14日
+        2024年12月21日
       </div>
       <div>
         <img src="/logoTest/time_icon.jpg" alt="" />
-        下午 7:00
+        下午 6:30
       </div>
       <div>
         <img src="/logoTest/num_icon.jpg" alt="" />
@@ -25,11 +25,9 @@ export default function Index() {
       </div>
     </div>
   </div>
-  <div className={style.selectShowing}>場合:周年紀念</div>
-  <div className={style.textareashowing}>特殊需求:</div>
-  <a href="">
-    <button className={style.finsh}>更改訂位</button>
-  </a>
+  <div className={style.selectShowing}>場合:生日</div>
+  <div className={style.textareashowing}>特殊需求:有蛋糕要冰</div>
+  <Link href="/restaurant"><button className={style.finsh}>完成訂位</button></Link>
 </div>
  
  </>

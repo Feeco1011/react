@@ -23,7 +23,7 @@ export default function Navbar() {
     <div className={styles.header}>
       <div className={styles.logoParent}>
         <div className={styles.logo}>
-          <a href="index123">
+          <a href="../">
             <img
               src="/taiwango.png"
               alt=""

@@ -12,7 +12,6 @@ export default function Member() {
   return (
     <div className={styles.profile}>
     <div className={styles.card}>
-   
       <div className={styles.image}>
         <Image
           width={50}
@@ -21,7 +20,7 @@ export default function Member() {
           className={styles.imageChild}
           alt="..."
         />
-        <b className={styles.b}>王小明</b> 
+        {/* <b className={styles.b}>王小明</b>  */}
       </div>
   
  
