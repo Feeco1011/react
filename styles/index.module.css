@@ -1,0 +1,52 @@
+.container {
+  max-width: 1440px;
+  padding-left: 10%;
+  padding-right: 10%;
+  flex-wrap: wrap;
+}
+
+.popwell {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.viewwell {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.category {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.cityy {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.word {
+  border-left: 15px solid #fc9f4d;
+  border-bottom: 1px solid #fc9f4d;
+  width: 90%;
+  color: #fc9f4d;
+
+  font-size: 20px;
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.title {
+  padding-left: 5px;
+}
+.title1 {
+  padding-left: 5px;
+  justify-content: center;
+}
+
+.had {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

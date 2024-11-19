@@ -1,6 +1,4 @@
-.hed {
-    
-}
+
 
 .imgd {
     width: 40px;
@@ -55,7 +53,8 @@ text-decoration:none;
     width: 550px;
     height: 217px;
     border-radius: 8px 8px 0px  0px;
-  
+    object-fit: cover;
+    justify-content: center;
 }
 .date {
     display: flex;
