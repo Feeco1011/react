@@ -11,16 +11,10 @@ const Restaurant = () => {
         <Member />
       <div className={styles.card1}>
       			<b className={styles.b1}>我的訂位</b>
-      			<div className={styles.item}>
-        				<div className={styles.id}>1234567890</div>
-        				<div className={styles.hotelName}>煙波大飯店台南館</div>
-        				<div className={styles.hotelDate}>{`2024-10-12 `}</div>
-        			
-      			</div>
       			<div className={styles.item1}>
-        				<div className={styles.id}>1234567890</div>
-        				<div className={styles.hotelName}>煙波大飯店台南館</div>
-        				<div className={styles.hotelDate}>{`2024-10-12 `}</div>
+        				<div className={styles.id}>A1234567890</div>
+        				<div className={styles.hotelName}>心潮飯店</div>
+        				<div className={styles.hotelDate}>{`2024-11-21`}</div>
         				
       			</div>
       			<div className={styles.caption}>

@@ -45,13 +45,13 @@ export default function Home() {
           </a>
         </div>
         <div className={styles.div5}>
-          <a href="index123">
+          <a href="/">
             <img className={styles.dish1Icon} alt="" src="/camping-tent.png" />
             <b className={styles.b5}>露營</b>
           </a>
         </div>
         <div className={styles.div5}>
-          <a href="index123">
+          <a href="/">
             <img className={styles.dish1Icon} alt="" src="/shrine.png" />
             <b className={styles.b5}>宮廟參拜</b>
           </a>
