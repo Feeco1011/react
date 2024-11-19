@@ -2,13 +2,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import style from '@/styles/home.module.css'
+<<<<<<< HEAD
 import styles from '@/styles/frame.module.css'
+=======
+>>>>>>> john
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
+<<<<<<< HEAD
       <div className={styles.div}>
         <div className={styles.title}>玩遍台灣，吃遍美味，住進美好時光！</div>
         <div className={styles.pics}>
@@ -66,6 +70,42 @@ export default function Home() {
           <div className={style.imageSection}>
             <img
               src="/imge/taipei101.png"
+=======
+      <div className={style.container}>
+          <div className={style.cardContainer} id="cardContainer1" >
+            <div className={style.imageSection}>
+              <img
+                src="/restaurantPicture/one/心潮1.jpg"
+                alt="Photo"
+                className={style.photo}
+              />
+              <div className={style.overlay}>
+                <img
+                  src="/logoTest/logoTest.ico"
+                  alt="icon"
+                  className={style.icon}
+                />
+                <span className={style.text}>文字標題</span>
+              </div>
+              <div className={style.rightIconOverlay}>
+                <img
+                  src="/logoTest/logoTest.ico"
+                  alt="icon"
+                  className={style.rightIcon}
+                />
+              </div>
+            </div>
+            <div className={style.textSection}>
+              <p>這是第一行文字</p>
+              <p>這是第二行文字</p>
+            </div>
+          </div>
+        
+
+        <div className={style.cardContainer} id="cardContainer2">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
               alt="Photo"
               className={style.photo}
             />
@@ -75,7 +115,7 @@ export default function Home() {
                 alt="icon"
                 className={style.icon}
               />
-              <span className={style.text}>台北</span>
+              <span className={style.text}>文字標題</span>
             </div>
             <div className={style.rightIconOverlay}>
               <img
@@ -86,6 +126,41 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer3">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
+              alt="Photo"
+              className={style.photo}
+            />
+            <div className={style.overlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.icon}
+              />
+<<<<<<< HEAD
+              <span className={style.text}>台北</span>
+=======
+              <span className={style.text}>文字標題</span>
+>>>>>>> john
+            </div>
+            <div className={style.rightIconOverlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.rightIcon}
+              />
+            </div>
+          </div>
+          <div className={style.textSection}>
+<<<<<<< HEAD
             <p>台北101</p>
           </div>
         </div>
@@ -94,6 +169,17 @@ export default function Home() {
           <div className={style.imageSection}>
             <img
               src="https://i.ytimg.com/vi/7_YrfvTKA_4/maxresdefault.jpg"
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer4">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
               alt="Photo"
               className={style.photo}
             />
@@ -103,7 +189,11 @@ export default function Home() {
                 alt="icon"
                 className={style.icon}
               />
+<<<<<<< HEAD
               <span className={style.text}>台北</span>
+=======
+              <span className={style.text}>文字標題</span>
+>>>>>>> john
             </div>
             <div className={style.rightIconOverlay}>
               <img
@@ -114,6 +204,7 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+<<<<<<< HEAD
             <p>自由廣場</p>
           </div>
         </div>
@@ -174,6 +265,17 @@ export default function Home() {
           <div className={style.imageSection}>
             <img
               src="/imge/大坑紙箱.jfif"
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer5">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
               alt="Photo"
               className={style.photo}
             />
@@ -183,7 +285,11 @@ export default function Home() {
                 alt="icon"
                 className={style.icon}
               />
+<<<<<<< HEAD
               <span className={style.text}>台中</span>
+=======
+              <span className={style.text}>文字標題</span>
+>>>>>>> john
             </div>
             <div className={style.rightIconOverlay}>
               <img
@@ -194,14 +300,23 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+<<<<<<< HEAD
             <p>大坑紙箱</p>
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+>>>>>>> john
           </div>
         </div>
 
         <div className={style.cardContainer} id="cardContainer6">
           <div className={style.imageSection}>
             <img
+<<<<<<< HEAD
               src="/imge/新社古堡.jpeg"
+=======
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
               alt="Photo"
               className={style.photo}
             />
@@ -211,7 +326,11 @@ export default function Home() {
                 alt="icon"
                 className={style.icon}
               />
+<<<<<<< HEAD
               <span className={style.text}>台中</span>
+=======
+              <span className={style.text}>文字標題</span>
+>>>>>>> john
             </div>
             <div className={style.rightIconOverlay}>
               <img
@@ -222,14 +341,23 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+<<<<<<< HEAD
             <p>新社古堡</p>
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+>>>>>>> john
           </div>
         </div>
 
         <div className={style.cardContainer} id="cardContainer7">
           <div className={style.imageSection}>
             <img
+<<<<<<< HEAD
               src="/imge/月光紛飛.jpeg"
+=======
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
               alt="Photo"
               className={style.photo}
             />
@@ -239,7 +367,11 @@ export default function Home() {
                 alt="icon"
                 className={style.icon}
               />
+<<<<<<< HEAD
               <span className={style.text}>台中</span>
+=======
+              <span className={style.text}>文字標題</span>
+>>>>>>> john
             </div>
             <div className={style.rightIconOverlay}>
               <img
@@ -250,14 +382,23 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+<<<<<<< HEAD
             <p>禹禹藝術工作室作品〈月光紛飛〉</p>
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+>>>>>>> john
           </div>
         </div>
 
         <div className={style.cardContainer} id="cardContainer8">
           <div className={style.imageSection}>
             <img
+<<<<<<< HEAD
               src="/imge/國家歌劇院.jpg"
+=======
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
               alt="Photo"
               className={style.photo}
             />
@@ -278,13 +419,19 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+<<<<<<< HEAD
             <p>台中國家歌劇院</p>
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+>>>>>>> john
           </div>
         </div>
 
         <div className={style.cardContainer} id="cardContainer9">
           <div className={style.imageSection}>
             <img
+<<<<<<< HEAD
               src="/imge/赤崁樓.jpg"
               alt="Photo"
               className={style.photo}
@@ -454,6 +601,9 @@ export default function Home() {
           <div className={style.imageSection}>
             <img
               src="/imge/高雄流行音樂中心.jpg"
+=======
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
               alt="Photo"
               className={style.photo}
             />
@@ -474,6 +624,7 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+<<<<<<< HEAD
             <p>高雄流行音樂中心</p>
           </div>
         </div>
@@ -482,6 +633,17 @@ export default function Home() {
           <div className={style.imageSection}>
             <img
               src="/imge/光之穹頂.jpg"
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer10">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+>>>>>>> john
               alt="Photo"
               className={style.photo}
             />
@@ -491,7 +653,11 @@ export default function Home() {
                 alt="icon"
                 className={style.icon}
               />
+<<<<<<< HEAD
               <span className={style.text}>高雄</span>
+=======
+              <span className={style.text}>文字標題</span>
+>>>>>>> john
             </div>
             <div className={style.rightIconOverlay}>
               <img
@@ -502,11 +668,191 @@ export default function Home() {
             </div>
           </div>
           <div className={style.textSection}>
+<<<<<<< HEAD
             <p>美麗島捷運站&光之穹頂</p>
+=======
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer11">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+              alt="Photo"
+              className={style.photo}
+            />
+            <div className={style.overlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.icon}
+              />
+              <span className={style.text}>文字標題</span>
+            </div>
+            <div className={style.rightIconOverlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.rightIcon}
+              />
+            </div>
+          </div>
+          <div className={style.textSection}>
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer12">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+              alt="Photo"
+              className={style.photo}
+            />
+            <div className={style.overlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.icon}
+              />
+              <span className={style.text}>文字標題</span>
+            </div>
+            <div className={style.rightIconOverlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.rightIcon}
+              />
+            </div>
+          </div>
+          <div className={style.textSection}>
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer13">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+              alt="Photo"
+              className={style.photo}
+            />
+            <div className={style.overlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.icon}
+              />
+              <span className={style.text}>文字標題</span>
+            </div>
+            <div className={style.rightIconOverlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.rightIcon}
+              />
+            </div>
+          </div>
+          <div className={style.textSection}>
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer14">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+              alt="Photo"
+              className={style.photo}
+            />
+            <div className={style.overlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.icon}
+              />
+              <span className={style.text}>文字標題</span>
+            </div>
+            <div className={style.rightIconOverlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.rightIcon}
+              />
+            </div>
+          </div>
+          <div className={style.textSection}>
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer15">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+              alt="Photo"
+              className={style.photo}
+            />
+            <div className={style.overlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.icon}
+              />
+              <span className={style.text}>文字標題</span>
+            </div>
+            <div className={style.rightIconOverlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.rightIcon}
+              />
+            </div>
+          </div>
+          <div className={style.textSection}>
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+          </div>
+        </div>
+
+        <div className={style.cardContainer} id="cardContainer16">
+          <div className={style.imageSection}>
+            <img
+              src="/restaurantPicture/one/心潮1.jpg"
+              alt="Photo"
+              className={style.photo}
+            />
+            <div className={style.overlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.icon}
+              />
+              <span className={style.text}>文字標題</span>
+            </div>
+            <div className={style.rightIconOverlay}>
+              <img
+                src="/logoTest/logoTest.ico"
+                alt="icon"
+                className={style.rightIcon}
+              />
+            </div>
+          </div>
+          <div className={style.textSection}>
+            <p>這是第一行文字</p>
+            <p>這是第二行文字</p>
+>>>>>>> john
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className={style.rectangleContainer}>
         <div className={`${style.rectangle} ${style.rectangle1}`}>
           <div className={style.rectangleText}>基隆</div>
@@ -525,6 +871,28 @@ export default function Home() {
         </div>
         <div className={`${style.rectangle} ${style.rectangle6}`}>
           <div className={style.rectangleText}>台東</div>
+=======
+      
+
+      <div className={style.rectangleContainer}>
+        <div className={`${style.rectangle} ${style.rectangle1}`}>
+          <div className={style.rectangleText}>文本1</div>
+        </div>
+        <div className={`${style.rectangle} ${style.rectangle2}`}>
+          <div className={style.rectangleText}>文本2</div>
+        </div>
+        <div className={`${style.rectangle} ${style.rectangle3}`}>
+          <div className={style.rectangleText}>文本3</div>
+        </div>
+        <div className={`${style.rectangle} ${style.rectangle4}`}>
+          <div className={style.rectangleText}>文本4</div>
+        </div>
+        <div className={`${style.rectangle} ${style.rectangle5}`}>
+          <div className={style.rectangleText}>文本5</div>
+        </div>
+        <div className={`${style.rectangle} ${style.rectangle6}`}>
+          <div className={style.rectangleText}>文本6</div>
+>>>>>>> john
         </div>
       </div>
     </>

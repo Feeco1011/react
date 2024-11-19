@@ -21,7 +21,7 @@ export default function Index() {
     <>
       <title>餐廳訂位頁面</title>
       <div className={`${style.container} ${style.restaunrantName}`}>
-        嚮辣 台北松江店
+      心潮飯店 SINCHAO RICE SHOPPE
       </div>
       <div className={style.imgContainer}>
         <div className={style.imageWrapper}>
@@ -33,22 +33,22 @@ export default function Index() {
         </div>
         <div className={style.rightImages}>
           <img
-            src="/restaurantPicture/one/心潮1.jpg"
+            src="/restaurantPicture/one/心潮2.jpg"
             alt="右側圖片1"
             className={style.rightImage}
           />
           <img
-            src="/restaurantPicture/one/心潮1.jpg"
+            src="/restaurantPicture/one/心潮3.jpg"
             alt="右側圖片2"
             className={style.rightImage}
           />
           <img
-            src="/restaurantPicture/one/心潮1.jpg"
+            src="/restaurantPicture/one/心潮4.jpg"
             alt="右側圖片3"
             className={style.rightImage}
           />
           <img
-            src="/restaurantPicture/one/心潮1.jpg"
+            src="/restaurantPicture/one/心潮5.jpg"
             alt="右側圖片4"
             className={style.rightImage}
           />
@@ -104,25 +104,23 @@ export default function Index() {
         </div>
       </div>
       <div className={`${style.container} ${style.introduction}`}>
-        嚮辣和牛麻辣鍋提供嗜辣族味覺與視覺雙飽足體驗，六種和牛玩味吃法，頂級海陸無限享用，搭配吸睛擺盤、時尚感的酒吧與自助吧台。讓吃到飽不只吃到爆，吃到飽也能有型有款！
+      心潮飯店在各台菜餐廳林立之下，我們提供了新式創新及保有經典台菜的餐點服務。
+      另有提供雞尾酒、葡萄酒、各式軟性飲料的選擇，加上位處微風信義百貨內，整日營運之下，午茶時間餐廳沒有休息，整日也提供了咖啡及甜點的多樣性選擇。
         <div className={style.reservationKnowing}>
           <ol>
-            訂位須知
             <ol>
-              ◆訂位時間保留十五分鐘，逾時將取消訂位
-              <ul>餐廳名稱：台北凱達大飯店</ul>
-              <ul>餐廳電話：(02) 2515 - 1658</ul>
-              <ul>餐廳地址：台北市中山區松江路131-1號</ul>
-              <ul>營業時間：每日 00:00-02:00 每日 11:30-00:00</ul>
-              <ul>價位：NT$999及以下</ul>
-              <ul>料理：涮涮鍋</ul>
+              <ul>餐廳名稱：心潮飯店 SINCHAO RICE SHOPPE</ul>
+              <ul>餐廳電話：(02)2723-9976</ul>
+              <ul>餐廳地址：台北市信義區忠孝東路五段68號2樓</ul>
+              <ul>營業時間：周日至周三 11:00-21:30 &nbsp;&nbsp;周四至周六 11:00-22:00</ul>
+              <ul>料理類型：中式料理, 百貨商圈</ul>
             </ol>
           </ol>
         </div>
       </div>
       <div className={`${style.container} ${style.googlemap}`}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14457.620968102943!2d121.5332802!3d25.0542505!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94342e269a7%3A0x279d704e691345f3!2z5Zqu6L6jIOWSjOeJm-m6u-i-o-mNiyDlj7DljJfmnb7msZ_lupc!5e0!3m2!1szh-TW!2stw!4v1730274427824!5m2!1szh-TW!2stw"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.242338643222!2d121.5665695!3d25.0405014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abce7987eb23%3A0xd66dd276f16c59a2!2z5b-D5r2u6aOv5bqXIFNJTkNIQU8gUklDRSBTSE9QUEU!5e0!3m2!1szh-TW!2stw!4v1731667233415!5m2!1szh-TW!2stw"
           allowFullScreen=""
           style={{ border: 0 }}
           loading="lazy"
@@ -133,7 +131,7 @@ export default function Index() {
         ></iframe>
       </div>
       <br /> <br />
-      <div className={`${style.container} ${style.guestCommentTitle}`}>
+      {/* <div className={`${style.container} ${style.guestCommentTitle}`}>
         顧客評論
       </div>
       <br />
@@ -249,7 +247,7 @@ export default function Index() {
             肉的品質很好，服務態度佳，自助吧的東西非常多元提供很多選擇，這次點了798套餐，真的很讚，很久沒吃過這麼讚的火鍋肉品。
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
