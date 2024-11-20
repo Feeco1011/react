@@ -169,6 +169,7 @@ export default function Profile() {
         </div>
       </div>
       </div>
+      <title>修改個人資訊</title>
       <Toaster />
     </>
   )

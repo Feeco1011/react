@@ -35,6 +35,7 @@ const Restaurant = () => {
         				</button>
       			</div>
     		</div>
+				<title>我的餐廳訂位</title>
     </div> 
   )
 }
