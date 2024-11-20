@@ -99,7 +99,7 @@ const Register = () => {
 const hasErrors = Object.values(newErrors).some((v) => v)
 
 // 表單檢查--END---
-return { newErrors, hasErrors }
+return { newErrors, hasErrors}
 }
 
 const handleSubmit = async (e) => {
@@ -128,7 +128,6 @@ const handleSubmit = async (e) => {
     <div className={styles.profile}>
       <div className={styles.signupcard}>
         <b className={styles.b}>會員註冊</b>
-        {/* <div className={styles.info} /> */}
         <div className={styles.div3}>
           <button type="submit" className={styles.registerchild}>
             會員註冊

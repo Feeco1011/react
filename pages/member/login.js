@@ -36,6 +36,7 @@ const Login = () => {
             <Link href="register" className={styles.tosignup}>
               會員註冊
             </Link>
+
           </div>
         </div>
         <div className={styles.login}>
@@ -90,7 +91,11 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+       </div>
+
+       
+
+    
  
   )
 }

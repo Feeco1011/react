@@ -157,6 +157,9 @@ export function AuthProvider({ children }) {
 
       console.log(member)
 
+       // 儲存會員資訊到 `localStorage`
+    localStorage.setItem('authUser', JSON.stringify(member))
+
       // 設定到狀態中
       setAuth({
         isAuth: true,
@@ -192,6 +195,9 @@ export function AuthProvider({ children }) {
     if (resData.status === 'success') {
       alert('成功登出!')
 
+      // 清除 localStorage 中的會員資料
+      localStorage.removeItem('authUser')
+
       // 設定回原本的未登入的初始值
       setAuth({
         isAuth: false,
@@ -215,7 +221,7 @@ export function AuthProvider({ children }) {
     try {
       const url = 'http://localhost:3005/api/member'
       const res = await fetch(url, {
-        credentials: 'include', // 設定cookie或是存取隱私資料時要加這個參數
+        credentials: 'include', // 設定cookie或是存取隱私資料時要加這個參數 
         method: 'GET',
       })
 

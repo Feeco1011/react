@@ -4,12 +4,15 @@ import { FaSearch } from 'react-icons/fa'
 // import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { useAuth } from '@/hooks/use-auth'
 
 
 export default function Navbar() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
+
+  const { auth, login, logout } = useAuth()
 
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -96,10 +99,27 @@ export default function Navbar() {
                   <li>
                     <Link href="/member/my-blog">我的論壇</Link>
                   </li>
+                    
+                       {/* 登出按鈕 (如果已登入) */}
+                      
+         {auth.isAuth && (
+          <div className={styles.alllogout}>
+            <button
+              type="button"
+              className={styles}
+              onClick={() => {
+                logout()
+              }}
+            >
+              登出
+            </button>
+          </div>
+        )}
+        
 
-                  <li>
-                    <Link href="/member/logout">登出</Link>
-                  </li>
+                 
+                    {/* <Link href="/member/logout">登出</Link> */}
+                  
                 </ul>
               </div>
             )}

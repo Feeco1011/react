@@ -194,6 +194,14 @@
   background-color: #f0f0f0;
 }
 
+.alllogout button {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: white;
+  cursor: pointer
+}
+
 /* mobile */
 @media(max-width: 375px) {
   .header {

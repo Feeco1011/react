@@ -161,6 +161,7 @@
   width: 590px;
   height: 46px;
   font-size: 24px;
+  cursor: pointer
 }
 
 .registerchild {
@@ -172,6 +173,7 @@
   width: 590px;
   height: 46px;
   font-size: 24px;
+  cursor: pointer
 }
 
 
@@ -361,6 +363,7 @@
   border-radius: 5px;
   border: none;
   transform-origin: left; 
+  cursor: pointer
 }
 
 .registerconfirmshowpass {
@@ -371,6 +374,7 @@
   background-color: #7db9de;
   border-radius: 5px;
   border: none;
+  cursor: pointer
 
 }
 .showloginpass {
@@ -381,6 +385,7 @@
   background-color: #7db9de;
   border-radius: 5px;
   border: none;
+  cursor: pointer
  
 
 }
