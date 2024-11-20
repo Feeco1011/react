@@ -4,7 +4,7 @@ import { FaDeviantart } from 'react-icons/fa6'
 import axios from 'axios' // 假設使用 axios 來進行後端請求
 
 export default function Messages(props) {
-  console.log('test', props)
+  //console.log('eddieee', props)
 
   const [isLiked, setIsLiked] = useState(false) // 點擊狀態
   const [likeCount, setLikeCount] = useState('') // 初始讚數
@@ -53,11 +53,11 @@ export default function Messages(props) {
           <div className={styles.profile}>
             <img
               className={styles.img}
-              src={props.data.imgUrl}
+              src={props.data.imgUrl ? props.data.imgUrl : `/default.jpg`}
               // "https://cdn2.ettoday.net/images/4697/d4697600.jpg"
               alt=""
             />
-            <div className={styles.name}>{props.data.m_id}</div>
+            <div className={styles.name}>{props.data.username}</div>
           </div>
 
           <div className={styles.data}>
