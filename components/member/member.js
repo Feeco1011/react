@@ -24,7 +24,7 @@ export default function Member() {
       </div>
   
  
-      <FaCamera
+      {/* <FaCamera
         className="icon"
         style={{
           position: 'absolute',
@@ -34,8 +34,7 @@ export default function Member() {
           overflow: 'hidden',
         }}
         size="30px"
-        // onClick={}
-      />
+      /> */}
 
       <div className={styles.info}>
         <Link href="/member/edit-profile">
