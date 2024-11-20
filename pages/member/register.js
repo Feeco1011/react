@@ -74,8 +74,14 @@ const Register = () => {
     newErrors.mobile = '電話號碼不能大於10碼'
   }
 
+  // if (!user.email) {
+  //   newErrors.email = '電子信箱為必填'
+  // }
+
   if (!user.email) {
     newErrors.email = '電子信箱為必填'
+  } else if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(user.email)) {
+    newErrors.email = '電子信箱格式不正確，必須包含@符號'
   }
 
   if (user.password !== user.confirmPassword) {
@@ -99,7 +105,7 @@ const Register = () => {
 const hasErrors = Object.values(newErrors).some((v) => v)
 
 // 表單檢查--END---
-return { newErrors, hasErrors }
+return { newErrors, hasErrors}
 }
 
 const handleSubmit = async (e) => {
@@ -128,7 +134,6 @@ const handleSubmit = async (e) => {
     <div className={styles.profile}>
       <div className={styles.signupcard}>
         <b className={styles.b}>會員註冊</b>
-        {/* <div className={styles.info} /> */}
         <div className={styles.div3}>
           <button type="submit" className={styles.registerchild}>
             會員註冊
@@ -212,7 +217,7 @@ const handleSubmit = async (e) => {
                   <div className={styles.inputGroup2}>
                     <label className={styles.div13} htmlFor="email">電子信箱{' '}</label>
                     <input
-                      type="email"
+                      type="text"
                        name="email"
                       className={styles.input}
                       onChange={handleFieldChange}
@@ -296,6 +301,7 @@ const handleSubmit = async (e) => {
         </div>
       </div>
     </div>
+    <title>會員註冊</title>
     </form>
       
   )

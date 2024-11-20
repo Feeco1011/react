@@ -4,6 +4,7 @@ import Link from 'next/link'
 export default function Index() {
   const [people, setPeople] = useState(0)
   const [time, setTime] = useState(0)
+  const [date, setDate] = useState('')
   const [memo, setMemo] = useState('')
   const [resaon, setResaon] = useState('')
   useEffect(() => {
@@ -20,7 +21,16 @@ export default function Index() {
     if (localStorage.getItem('restaurant-resaon')) {
       setResaon(localStorage.getItem('restaurant-resaon'))
     }
-
+    if (localStorage.getItem("restaurant-date")) {
+      const storedDate = new Date(localStorage.getItem("restaurant-date"));
+      // 格式化为仅日期，例如 "2023年11月20日"
+      const formattedDate = storedDate.toLocaleDateString("zh-CN", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+      setDate(formattedDate);
+    }
   }, [])
 
   return (
@@ -34,7 +44,7 @@ export default function Index() {
     <div className={style.ifo}>
       <div>
         <img src="/logoTest/date_icon.jpg" alt="" />
-        2024年12月21日
+        {date}
       </div>
       <div>
         <img src="/logoTest/time_icon.jpg" alt="" />

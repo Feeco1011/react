@@ -127,6 +127,7 @@ const Pay = () => {
           繼續
         </Button>
       </div>
+      <title>付款頁面</title>
     </div>
   )
 }

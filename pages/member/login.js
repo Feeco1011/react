@@ -30,19 +30,17 @@ const Login = () => {
             會員登入
           </button>
         </div>
-        {/* <b className={styles.b1}>會員登入</b> */}
         <div className={styles.logingrorp1}>
           <b className={styles.memberyet}>尚未註冊會員?</b>
           <div className={styles.logingrorp2}>
             <Link href="register" className={styles.tosignup}>
               會員註冊
             </Link>
-            {/* <b className={styles.tosignup}>會員註冊</b> */}
+
           </div>
         </div>
         <div className={styles.login}>
           <div className={styles.inputGroup}>
-            {/* <div className={styles.item} /> */}
           </div>
 
           <div className={styles.div14}>
@@ -93,7 +91,12 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+      <title>會員登入</title>
+       </div>
+
+       
+
+    
  
   )
 }

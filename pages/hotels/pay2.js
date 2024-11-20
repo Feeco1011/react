@@ -47,6 +47,7 @@ const Pay2 = () => {
           {/* 當按鈕被點擊時，呼叫 handleComplete */}
         </div>
       </div>
+      <title>付款頁面</title>
     </div>
   )
 }
