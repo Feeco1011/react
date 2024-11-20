@@ -161,9 +161,8 @@ export default function BlogID(props) {
             onInput={(e) => {
               setTextMessage(e.target.value)
             }}
-          >
-            {textMessage}
-          </textarea>
+            value={textMessage}
+          ></textarea>
           <div className={styles.Qa}>
             <button className={styles.button1} onClick={handleMessage}>
               留言

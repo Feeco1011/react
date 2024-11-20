@@ -54,7 +54,7 @@ export default function ForumCard(props) {
         />
 
         <div className={styles.date}>
-          <div className={styles.name}>{props.data.user}</div>
+          <div className={styles.name}>{props.data.username}</div>
           <div className={styles.day}>{props.data.pt_created}</div>
         </div>
 
