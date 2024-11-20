@@ -3,7 +3,7 @@ import styles from '@/styles/ForumCardB.module.css'
 
 export default function ForumCardB(props) {
   const { pop } = props
-  console.log('pop', pop)
+  //console.log('pop', pop)
 
   return (
     <div className={styles.container}>
@@ -14,7 +14,7 @@ export default function ForumCardB(props) {
         {/* 用於包裹文本內容 */}
         <div className={styles.content}>
           <div className={styles.date}>
-            <div className={styles.name}>{pop.user}</div>
+            <div className={styles.name}>{pop.username}</div>
             <div className={styles.day}>{pop.pt_created}</div>
           </div>
           <div className={styles.city}>{pop.pt_city}</div>

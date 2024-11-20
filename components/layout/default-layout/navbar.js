@@ -81,9 +81,9 @@ export default function Navbar() {
                     <Link href="/member/edit-profile">修改個人資訊</Link>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <Link href="/member/change-password">變更密碼</Link>
-                  </li>
+                  </li> */}
 
                   <li>
                     <Link href="/member/hotel-booking">我的訂房</Link>
