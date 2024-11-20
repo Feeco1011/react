@@ -74,8 +74,14 @@ const Register = () => {
     newErrors.mobile = '電話號碼不能大於10碼'
   }
 
+  // if (!user.email) {
+  //   newErrors.email = '電子信箱為必填'
+  // }
+
   if (!user.email) {
     newErrors.email = '電子信箱為必填'
+  } else if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(user.email)) {
+    newErrors.email = '電子信箱格式不正確，必須包含@符號'
   }
 
   if (user.password !== user.confirmPassword) {
@@ -211,7 +217,7 @@ const handleSubmit = async (e) => {
                   <div className={styles.inputGroup2}>
                     <label className={styles.div13} htmlFor="email">電子信箱{' '}</label>
                     <input
-                      type="email"
+                      type="text"
                        name="email"
                       className={styles.input}
                       onChange={handleFieldChange}

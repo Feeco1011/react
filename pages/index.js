@@ -514,7 +514,7 @@ export default function Home() {
         <div className={`${style.rectangle} ${style.rectangle6}`}>
           <div className={style.rectangleText}>台東</div>
         </div>
-      <title>台灣趣首頁</title>
+        <title>台灣趣首頁</title>
       </div>
     </>
   )
