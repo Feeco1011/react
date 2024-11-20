@@ -11,9 +11,10 @@ export default function Index() {
   const [category, setCategory] = useState([])
   const [city, setCity] = useState([])
   const [post, setPost] = useState(null)
-  const [selectedCategory, setSelectedCategory] = useState('') // 用來保存選擇的分類
+  const [selectedCategory, setSelectedCategory] = useState(0) // 用來保存選擇的分類
   const [filteredCategory, setFilteredCategory] = useState([]) // 篩選後的分類文章
-
+  const [selectedCity, setSelectedCity] = useState('全部') // 用來保存選擇的城市
+  const [filteredCity, setFilteredCity] = useState([]) // 篩選後的城市文章
   const router = useRouter()
   const { postId } = router.query // 取得 URL 中的 postId
 
@@ -21,7 +22,7 @@ export default function Index() {
     // 用來獲取熱門文章資料
     const fetchSinglePop = async () => {
       try {
-        const url = 'http://localhost:3005/api/posts' // 加上引號
+        const url = 'http://localhost:3005/api/posts/recommend' // 加上引號
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -30,7 +31,7 @@ export default function Index() {
         }
 
         const data = await response.json()
-        console.log('eddiepop',data)
+        // console.log('eddiepop', data)
 
         setPop(data) // 設置熱門文章資料
       } catch (error) {
@@ -40,60 +41,12 @@ export default function Index() {
 
     fetchSinglePop()
   }, []) // 依賴於 router.query.postId
-
-  useEffect(() => {
-    // 用來獲取熱門文章資料
-    const fetchSinglePop = async () => {
-      try {
-        const url = 'http://localhost:3005/api/posts' // 加上引號
-        const response = await fetch(url)
-
-        // 確認是否成功返回資料
-        if (!response.ok) {
-          throw new Error('Failed to fetch popular posts')
-        }
-
-        const data = await response.json()
-        console.log(data)
-
-        setPop(data) // 設置熱門文章資料
-      } catch (error) {
-        console.error('Error fetching popular posts:', error)
-      }
-    }
-
-    fetchSinglePop()
-  }, []) // 依賴於 router.query.postId
-
-  useEffect(() => {
-    // 用來獲取景點文章資料
-    const fetchSingleView = async () => {
-      try {
-        const url = 'http://localhost:3005/api/vposts' // 加上引號
-        const response = await fetch(url)
-
-        // 確認是否成功返回資料
-        if (!response.ok) {
-          throw new Error('Failed to fetch popular view')
-        }
-
-        const data = await response.json()
-        console.log('檢視node伺服器回傳給你跟景點相關的資料',data)
-
-        setView(data) // 設置景點文章資料
-      } catch (error) {
-        console.error('Error fetching popular View:', error)
-      }
-    }
-
-    fetchSingleView()
-  }, [router.query.postId]) // 依賴於 router.query.postId
 
   useEffect(() => {
     // 用來獲取分類文章資料
     const fetchSingleCategory = async () => {
       try {
-        const url = 'http://localhost:3005/api/catoposts' // 加上引號
+        const url = `http://localhost:3005/api/posts/category/${selectedCategory}` // 加上引號
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -102,16 +55,16 @@ export default function Index() {
         }
 
         const data = await response.json()
-        console.log(data)
+        // console.log('category',data);
 
-        setCategory(data) // 設置分類文章資料
+        setFilteredCategory(data) // 設置分類文章資料
       } catch (error) {
         console.error('Error fetching popular category:', error)
       }
     }
 
     fetchSingleCategory()
-  }, [router.query.postId]) // 依賴於 router.query.postId
+  }, [router.query.postId, selectedCategory]) // 依賴於 router.query.postId
 
   // 根據選擇的分類篩選文章
   useEffect(() => {
@@ -129,7 +82,8 @@ export default function Index() {
     // 用來獲取城市文章資料
     const fetchSingleCity = async () => {
       try {
-        const url = 'http://localhost:3005/api/cityposts' // 加上引號
+        // http://localhost:3005/api/posts/city/0
+        const url = `http://localhost:3005/api/posts/city/${selectedCity}` // 加上引號
         const response = await fetch(url)
 
         // 確認是否成功返回資料
@@ -138,7 +92,7 @@ export default function Index() {
         }
 
         const data = await response.json()
-        console.log(data)
+        console.log('city', data)
 
         setCity(data) // 設置城市文章資料
       } catch (error) {
@@ -147,7 +101,7 @@ export default function Index() {
     }
 
     fetchSingleCity()
-  }, [router.query.postId]) // 依賴於 router.query.postId
+  }, [router.query.postId, selectedCity]) // 依賴於 router.query.postId
 
   return (
     <>
@@ -160,7 +114,11 @@ export default function Index() {
           <br />
           <div className={styles.had}>
             {pop.map((p) => (
-              <Link href={`/blog/${p.pt_id}`} key={p.pt_id} className={styles.link}>
+              <Link
+                href={`/blog/${p.pt_id}`}
+                key={p.pt_id}
+                className={styles.link}
+              >
                 {' '}
                 {/* 修正 href 字串模板 */}
                 <ForumCardB pop={p} />
@@ -169,7 +127,7 @@ export default function Index() {
           </div>
         </div>
 
-        <br />
+        {/* <br />
         <div className={styles.viewwell}>
           <div className={styles.word}>
             <div className={styles.title}>景點</div>
@@ -177,14 +135,17 @@ export default function Index() {
           <br />
           <div className={styles.had}>
             {view.map((v) => (
-              <Link href={`/blog/${v.pt_id}`} key={v.pt_id} className={styles.link}>
+              <Link
+                href={`/blog/${v.pt_id}`}
+                key={v.pt_id}
+                className={styles.link}
+              >
                 {' '}
-                {/* 修正 href 字串模板 */}
                 <ForumCard data={v} />
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <br />
         <div className={styles.category}>
@@ -198,17 +159,20 @@ export default function Index() {
             onChange={(e) => setSelectedCategory(e.target.value)}
             value={selectedCategory}
           >
-            <option value="">全部</option>
-            <option value="歷史古蹟">歷史古蹟</option>
-            <option value="舒適休閒">舒適休閒</option>
-            <option value="自然環境">自然環境</option>
-            <option value="人文藝術">人文藝術</option>
+            <option value="0">全部</option>
+            <option value="1">歷史古蹟</option>
+            <option value="2">舒適休閒</option>
+            <option value="3">自然環境</option>
+            <option value="4">人文藝術</option>
           </select>
 
           <div className={styles.had}>
-            {category.map((v) => (
-              <Link href={`/blog/${v.pt_id}`} key={v.pt_id} className={styles.link}>
-                {' '}
+            {filteredCategory.map((v) => (
+              <Link
+                href={`/blog/${v.pt_id}`}
+                key={v.pt_id}
+                className={styles.link}
+              >
                 {/* 修正 href 字串模板 */}
                 <ForumCard data={v} />
               </Link>
@@ -222,16 +186,26 @@ export default function Index() {
             <div className={styles.title1}>城市</div>
           </div>
           <br />
-          <select>
-            <option>台北</option>
-            <option>新北</option>
-            <option>基隆</option>
+
+          <select
+            onChange={(e) => setSelectedCity(e.target.value)}
+            value={selectedCity}
+          >
+            <option value="全部">全部</option>
+            <option value="台北市">台北市</option>
+            <option value="新北市">新北市</option>
+            <option value="基隆市">基隆市</option>
+            {/* 你可以根據需要添加更多的城市選項 */}
             {/* ...其他城市選項 */}
           </select>
 
           <div className={styles.had}>
             {city.map((item) => (
-              <Link href={`/blog/${item.pt_id}`} key={item.pt_id} className={styles.link}>
+              <Link
+                href={`/blog/${item.pt_id}`}
+                key={item.pt_id}
+                className={styles.link}
+              >
                 {' '}
                 {/* 修正 href 字串模板 */}
                 <ForumCard data={item} />
@@ -239,6 +213,9 @@ export default function Index() {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <title>文章列表</title>
       </div>
     </>
   )

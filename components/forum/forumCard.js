@@ -45,7 +45,7 @@ export default function ForumCard(props) {
       <div className={styles.card}>
         <img
           className={styles.img}
-          src={`/viewblog-img/${props.data.pt_pe}.jpg`}
+          src={`/blog-img/${props.data.pt_pe}.jpg`}
           alt="景點圖片"
           onError={(e) => {
             e.target.src =

@@ -9,7 +9,7 @@ export default function BlogID(props) {
   const [isLiked, setIsLiked] = useState(false) // 初始化讚狀態
   const [likeCount, setLikeCount] = useState(0) // 初始化讚數
   const [messages, setMessages] = useState([]) // 留言數據
-  
+  const [textMessage, setTextMessage] = useState('')
   const [id, setId] = useState([])
   const router = useRouter()
 
@@ -30,7 +30,7 @@ export default function BlogID(props) {
 
   const fetchBlogData = async (id) => {
     try {
-      const url = `http://localhost:3005/api/posts/${id}` // 使用動態 blogID
+      const url = `http://localhost:3005/api/posts/postId/${id}` // 使用動態 blogID
       const response = await fetch(url)
       if (!response.ok) {
         throw new Error('Failed to fetch blog data')
@@ -53,33 +53,43 @@ export default function BlogID(props) {
     return <div>Loading...</div> // 顯示 loading 畫面
   }
 
-
-
   // 處理新增評論
   const handleMessage = async (message) => {
     try {
-      const url = `http:localhost:3005/api/posts/${id}`;
+      const url = `http://localhost:3005/api/posts/addMessage`
       const response = await fetch(url, {
         method: 'POST',
-        headers: getAuthHeader ? await getAuthHeader() : {},
+        headers: {
+          'content-type': 'application/json',
+        },
         body: JSON.stringify({
-          content: comment,
+          member_id: '3',
+          pt_id: router.query.blogID,
+          ct_sf: textMessage,
         }),
-      });
-      if (!response.ok) throw new Error('新增回覆失敗');
-      const data = await response.json();
-      setComments((prev) => [data, ...prev]);
-      toast.success('回覆成功！'); // 顯示成功提示
+      })
+      if (!response.ok) throw new Error('新增回覆失敗')
+      const data = await response.json()
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          ct_createdtime: '2024-11-12 00:53:54',
+          ct_id: Date.now(),
+          ct_sf: textMessage,
+          m_id: 3,
+          pt_id: router.query.blogID,
+          username: 'Mike',
+        },
+      ])
+
+      setTextMessage(() => ' ')
+      // toast.success('回覆成功！') // 顯示成功提示
     } catch (error) {
-      console.error('新增回覆錯誤:', error);
-      toast.error('新增回覆失敗'); // 顯示錯誤提示
+      console.error('新增回覆錯誤:', error)
+      // toast.error('新增回覆失敗') // 顯示錯誤提示
     }
-  };
-
-
-
-
-
+  }
 
   return (
     <>
@@ -101,7 +111,7 @@ export default function BlogID(props) {
             }
             alt=""
           />
-          <div className={styles1.name}>{blogData.user}</div>
+          <div className={styles1.name}>{blogData.username}</div>
           <div className={styles.date}>{blogData.pt_created}</div>
           <div className={styles.cate}>{blogData.pt_category}</div>
         </div>
@@ -120,7 +130,7 @@ export default function BlogID(props) {
       />
 
       <div className={styles1.gd}>
-        <div>回復</div>
+        {/* <div>回復</div> */}
         {/* <div>{messages.length}</div> */}
 
         <div
@@ -141,23 +151,28 @@ export default function BlogID(props) {
 
       <div className={styles.msgContainer}>
         <div className={styles.photom}>
-          <img
-            src="/user_pic.png"
-            alt=""
-            className={styles.msgPhoto}
-          />
+          <img src="/user_pic.png" alt="" className={styles.msgPhoto} />
         </div>
 
         <div className={styles.msgCard}>
           <textarea
             placeholder="留個言吧...."
             className={styles.textArea}
-          ></textarea>
+            onInput={(e) => {
+              setTextMessage(e.target.value)
+            }}
+          >
+            {textMessage}
+          </textarea>
           <div className={styles.Qa}>
-            <button className={styles.button1}>留言</button>
+            <button className={styles.button1} onClick={handleMessage}>
+              留言
+            </button>
           </div>
         </div>
       </div>
+
+      <title>文章詳情頁</title>
     </>
   )
 }
