@@ -295,6 +295,7 @@ const handleSubmit = async (e) => {
         </div>
       </div>
     </div>
+    <title>會員註冊</title>
     </form>
       
   )

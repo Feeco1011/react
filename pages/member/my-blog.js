@@ -14,6 +14,7 @@ const Blog = () => {
       			<b className={styles.b1}>我的論壇</b>
             <Card />
       			</div>
+      <title>我的論壇</title>
     		</div>
      
   )
