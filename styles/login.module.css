@@ -154,13 +154,14 @@
 
 .child {
   position: absolute;
-  top: 29px;
+  top: -59px;
   left: -155px;
   border-radius: 10px;
   background-color: #fc9f4d;
   width: 590px;
   height: 46px;
   font-size: 24px;
+  cursor: pointer
 }
 
 .registerchild {
@@ -172,6 +173,7 @@
   width: 590px;
   height: 46px;
   font-size: 24px;
+  cursor: pointer
 }
 
 
@@ -258,7 +260,7 @@
 }
 .logingrorp1 {
   position: absolute;
-  top: 829px;
+  top: 750px;
   left: 200px;
   display: flex;
   flex-direction: row;
@@ -361,6 +363,7 @@
   border-radius: 5px;
   border: none;
   transform-origin: left; 
+  cursor: pointer
 }
 
 .registerconfirmshowpass {
@@ -371,6 +374,7 @@
   background-color: #7db9de;
   border-radius: 5px;
   border: none;
+  cursor: pointer
 
 }
 .showloginpass {
@@ -381,6 +385,7 @@
   background-color: #7db9de;
   border-radius: 5px;
   border: none;
+  cursor: pointer
  
 
 }
@@ -529,7 +534,7 @@
   top: 70px;
   left: 62.5px;
   width: 702px;
-  height: 350px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

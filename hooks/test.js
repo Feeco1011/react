@@ -165,37 +165,17 @@ export function AuthProvider({ children }) {
         isAuth: true,
         userData: member,
       })
-      Swal.fire({
-        title: '你好！',
-        text: '是否要前往修改個人資訊頁？',
-        icon: 'success',
-        showCancelButton: true,
-        confirmButtonText: '是',
-        cancelButtonText: '否',
-      }).then((result) => {
-        if (result.isConfirmed) {
-          router.push('/member/edit-profile')
-        }
-      })
-    } else {
-      Swal.fire({
-        title: '錯誤',
-        text: '電子信箱或密碼錯誤',
-        icon: 'error',
-        confirmButtonText: '確認',
-      })
-    }
-  }
+
       
 
-//       //歡迎訊息與詢問是否要到個人資料頁
-//       if (confirm('你好，是否要前往修改個人資訊頁?')) {
-//         router.push('/member/edit-profile')
-//       }
-//     } else {
-//       alert('電子信箱或密碼錯誤')
-//   }
-//  }
+      //歡迎訊息與詢問是否要到個人資料頁
+      if (confirm('你好，是否要前往修改個人資訊頁?')) {
+        router.push('/member/edit-profile')
+      }
+    } else {
+      alert('電子信箱或密碼錯誤')
+  }
+ }
 
   // 模擬會員登出
   const logout = async () => {
@@ -213,7 +193,7 @@ export function AuthProvider({ children }) {
     const resData = await res.json()
 
     if (resData.status === 'success') {
-      alert('成功登出!')
+      alert('成功登出!') 
      router.push('/member/login')
 
       // 清除 localStorage 中的會員資料
@@ -267,7 +247,7 @@ export function AuthProvider({ children }) {
           setTimeout(() => {
             alert('無進入權限，請先登入!')
             router.push(loginRoute)
-          }, 150)
+          }, 150000)
         }
       }
     } catch (e) {
