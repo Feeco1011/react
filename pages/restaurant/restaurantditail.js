@@ -7,7 +7,8 @@ import Link from 'next/link'
 export default function Index() {
   const [people, setPeople] = useState('人數')
   const [time, setTime] = useState('時間')
-
+  const [date, setDate] = useState(new Date())
+  
   const handlePeopleChange = (e) => {
     setPeople(e.target.value)
     // 儲存在 localstorage
@@ -16,9 +17,14 @@ export default function Index() {
 
   const handleTimeChange = (e) => {
     setTime(e.target.value)
+    localStorage.setItem('restaurant-time', e.target.value)
   }
 
-  const [selectedDate, setSelectedDate] = useState(new Date())
+  const handleDateChange = (selectedDate) => {
+    setDate(selectedDate)
+    localStorage.setItem('restaurant-date', selectedDate)
+  }
+
   return (
     <>
       <title>餐廳訂位頁面</title>
@@ -75,11 +81,11 @@ export default function Index() {
           <DatePicker
             className={`${style.box2}`}
             calendarClassName={style.customDatepickerInput}
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
+            value={date ? date.toISOString().split("T")[0] : ""} // 格式化显示值
+            selected={date} // 控制当前选中的日期
+            onChange={handleDateChange} // 使用修正的 onChange
             dateFormat="yyyy年MM月dd日"
-            minDate={new Date()}
-            // 禁止選擇當天以前的日期
+            minDate={new Date()} // 禁止选择今天以前的日期
           />
 
           {/* 時間下拉式選單 */}
