@@ -307,6 +307,8 @@ export default function HotelDetail() {
         {/* 加入 Google 地圖 */}
         <AddressMap />
       </div>
+      <title>福朋喜來登酒店</title>
+
     </div>
   )
 }
