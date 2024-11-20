@@ -193,7 +193,8 @@ export function AuthProvider({ children }) {
     const resData = await res.json()
 
     if (resData.status === 'success') {
-      alert('成功登出!')
+      alert('成功登出!') 
+     router.push('/member/login')
 
       // 清除 localStorage 中的會員資料
       localStorage.removeItem('authUser')
