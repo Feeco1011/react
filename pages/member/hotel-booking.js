@@ -12,7 +12,7 @@ const Hotel = () => {
       <div className={styles.card1}>
       			<b className={styles.b1}>我的訂房</b>
       			<div className={styles.item1}>
-        				<div className={styles.id}>A1245378200</div>
+						<Link href="/hotels/pay3" className={styles.id} >A1245378200</Link>
         				<div className={styles.hotelName}>福朋喜來登酒店</div>
         				<div className={styles.hotelDate}>{`2024-11-21 `}</div>
         				<div className={styles.hotelPrice}>NT$4380.00</div>

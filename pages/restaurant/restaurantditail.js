@@ -10,6 +10,8 @@ export default function Index() {
 
   const handlePeopleChange = (e) => {
     setPeople(e.target.value)
+    // 儲存在 localstorage
+    localStorage.setItem('restaurant-people', e.target.value)
   }
 
   const handleTimeChange = (e) => {
@@ -21,7 +23,7 @@ export default function Index() {
     <>
       <title>餐廳訂位頁面</title>
       <div className={`${style.container} ${style.restaunrantName}`}>
-      心潮飯店 SINCHAO RICE SHOPPE
+        心潮飯店 SINCHAO RICE SHOPPE
       </div>
       <div className={style.imgContainer}>
         <div className={style.imageWrapper}>
@@ -104,15 +106,18 @@ export default function Index() {
         </div>
       </div>
       <div className={`${style.container} ${style.introduction}`}>
-      心潮飯店在各台菜餐廳林立之下，我們提供了新式創新及保有經典台菜的餐點服務。
-      另有提供雞尾酒、葡萄酒、各式軟性飲料的選擇，加上位處微風信義百貨內，整日營運之下，午茶時間餐廳沒有休息，整日也提供了咖啡及甜點的多樣性選擇。
+        心潮飯店在各台菜餐廳林立之下，我們提供了新式創新及保有經典台菜的餐點服務。
+        另有提供雞尾酒、葡萄酒、各式軟性飲料的選擇，加上位處微風信義百貨內，整日營運之下，午茶時間餐廳沒有休息，整日也提供了咖啡及甜點的多樣性選擇。
         <div className={style.reservationKnowing}>
           <ol>
             <ol>
               <ul>餐廳名稱：心潮飯店 SINCHAO RICE SHOPPE</ul>
               <ul>餐廳電話：(02)2723-9976</ul>
               <ul>餐廳地址：台北市信義區忠孝東路五段68號2樓</ul>
-              <ul>營業時間：周日至周三 11:00-21:30 &nbsp;&nbsp;周四至周六 11:00-22:00</ul>
+              <ul>
+                營業時間：周日至周三 11:00-21:30 &nbsp;&nbsp;周四至周六
+                11:00-22:00
+              </ul>
               <ul>料理類型：中式料理, 百貨商圈</ul>
             </ol>
           </ol>
