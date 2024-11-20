@@ -315,7 +315,7 @@ const Index = () => {
     //     rating: 4,
     //     city: '台中',
     //     type: '雙人房',
-    //     imageUrl: 'https://girlsmood.com/wp-content/uploads/2019/10/bg1.jpg',
+    //     imageUrl: './imge/星空旅館.jpg',
     //   },
     // ]
     // setAccommodations(data)
@@ -411,6 +411,7 @@ const Index = () => {
         <img src="./imge/NTC0000085_92382.jpg" alt="" />
         <img src="./imge/271.jpg" alt="" />
       </div>
+      <title>飯店列表</title>
     </div>
   )
 }
