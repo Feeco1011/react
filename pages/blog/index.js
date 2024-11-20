@@ -30,7 +30,7 @@ export default function Index() {
         }
 
         const data = await response.json()
-        console.log(data)
+        console.log('eddiepop',data)
 
         setPop(data) // 設置熱門文章資料
       } catch (error) {
@@ -78,7 +78,7 @@ export default function Index() {
         }
 
         const data = await response.json()
-        console.log(data)
+        console.log('檢視node伺服器回傳給你跟景點相關的資料',data)
 
         setView(data) // 設置景點文章資料
       } catch (error) {
@@ -160,7 +160,7 @@ export default function Index() {
           <br />
           <div className={styles.had}>
             {pop.map((p) => (
-              <Link href={`/blog/${p.pt_id}`} key={p.pt_id}>
+              <Link href={`/blog/${p.pt_id}`} key={p.pt_id} className={styles.link}>
                 {' '}
                 {/* 修正 href 字串模板 */}
                 <ForumCardB pop={p} />
@@ -177,10 +177,10 @@ export default function Index() {
           <br />
           <div className={styles.had}>
             {view.map((v) => (
-              <Link href={`/blog/${v.id}`} key={v.id}>
+              <Link href={`/blog/${v.pt_id}`} key={v.pt_id} className={styles.link}>
                 {' '}
                 {/* 修正 href 字串模板 */}
-                <ForumCard view={v} />
+                <ForumCard data={v} />
               </Link>
             ))}
           </div>
@@ -207,10 +207,10 @@ export default function Index() {
 
           <div className={styles.had}>
             {category.map((v) => (
-              <Link href={`/blog/${v.id}`} key={v.id}>
+              <Link href={`/blog/${v.pt_id}`} key={v.pt_id} className={styles.link}>
                 {' '}
                 {/* 修正 href 字串模板 */}
-                <ForumCard category={v} />
+                <ForumCard data={v} />
               </Link>
             ))}
           </div>
@@ -231,7 +231,7 @@ export default function Index() {
 
           <div className={styles.had}>
             {city.map((item) => (
-              <Link href={`/blog/${item.id}`} key={item.id}>
+              <Link href={`/blog/${item.pt_id}`} key={item.pt_id} className={styles.link}>
                 {' '}
                 {/* 修正 href 字串模板 */}
                 <ForumCard data={item} />
@@ -243,7 +243,3 @@ export default function Index() {
     </>
   )
 }
-
-
-
-
