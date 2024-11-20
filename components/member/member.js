@@ -14,9 +14,9 @@ export default function Member() {
     <div className={styles.card}>
       <div className={styles.image}>
         <Image
-          width={50}
-          height={50}
-          src="/blank-profile-pic.png"
+          width={80}
+          height={80}
+          src="/user_pic.png"
           className={styles.imageChild}
           alt="..."
         />
@@ -28,7 +28,7 @@ export default function Member() {
         className="icon"
         style={{
           position: 'absolute',
-          top: '110px',
+          top: '180px',
           left: '147px',
           height: '50px',
           overflow: 'hidden',
@@ -40,8 +40,8 @@ export default function Member() {
       <div className={styles.info}>
         <Link href="/member/edit-profile">
         <div className={router.pathname === '/member/edit-profile' ? styles.active : styles.inactive}>修改個人資訊</div></Link>
-        <Link href="/member/change-password">
-        <div className={router.pathname === '/member/change-password' ? styles.active : styles.inactive}>變更密碼</div></Link>
+        {/* <Link href="/member/change-password">
+        <div className={router.pathname === '/member/change-password' ? styles.active : styles.inactive}>變更密碼</div></Link> */}
         <Link href="/member/hotel-booking">
         <div className={router.pathname === '/member/hotel-booking' ? styles.active : styles.inactive}>我的訂房</div></Link>
         <Link href="/member/restaurant-reservation">
