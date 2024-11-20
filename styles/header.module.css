@@ -193,3 +193,44 @@
 .menu li:hover {
   background-color: #f0f0f0;
 }
+
+/* mobile */
+@media(max-width: 375px) {
+  .header {
+    width: 410px;
+    padding:0px
+  }
+
+  .component21Wrapper {
+    width:50px;
+  }
+  .frameParent {
+    width: 100px;
+  }
+
+  .frameParent select {
+    display: none;
+  }
+
+  .component22Wrapper {
+    width: 0;
+   
+  }
+  .logoParent {
+    width: 50px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    right: -60px;
+    width: 100px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 12px;
+    
+  }
+}

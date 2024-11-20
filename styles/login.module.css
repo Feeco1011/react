@@ -154,7 +154,7 @@
 
 .child {
   position: absolute;
-  top: 29px;
+  top: -59px;
   left: -155px;
   border-radius: 10px;
   background-color: #fc9f4d;
@@ -258,7 +258,7 @@
 }
 .logingrorp1 {
   position: absolute;
-  top: 829px;
+  top: 750px;
   left: 200px;
   display: flex;
   flex-direction: row;
@@ -529,7 +529,7 @@
   top: 70px;
   left: 62.5px;
   width: 702px;
-  height: 350px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
