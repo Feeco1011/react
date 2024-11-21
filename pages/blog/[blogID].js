@@ -77,9 +77,9 @@ export default function BlogID(props) {
           ct_createdtime: '2024-11-12 00:53:54',
           ct_id: Date.now(),
           ct_sf: textMessage,
-          m_id: 3,
+          m_id: 61,
           pt_id: router.query.blogID,
-          username: 'Mike',
+          username: '王大明',
         },
       ])
 
